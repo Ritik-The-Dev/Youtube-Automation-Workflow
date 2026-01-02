@@ -41,3 +41,6 @@ def check_status(project_id):
     params = {"project": project_id}
     response = requests.get(API_URL, headers=headers, params=params)
     return response.json()
+
+result = check_status('rtX4EDA3n6qxxu7c')
+print('The result is ',result)

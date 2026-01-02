@@ -1,19 +1,30 @@
-import subprocess
 import json
+import os
+from google import genai
+
+client = genai.Client(
+    api_key=os.environ["GEMINI_API_KEY"]
+)
 
 def generate_scenes(transcript_text):
+    if not transcript_text or not transcript_text.strip():
+        return None
+
+    # keep quota + latency predictable
+    transcript_text = transcript_text[:2500]
+
     prompt = f"""
-You are creating content for an Indian patriotic YouTube Short.
+Convert the following real incident into EXACTLY 5 scenes.
 
-TASK:
-- Convert the following real incident into EXACTLY 5 scenes.
-- Each scene must have:
-  1. Hindi voiceover text (1–2 sentences)
-  2. A detailed photorealistic cinematic image prompt
-- Tone: respectful, factual, emotional, not exaggerated
-- No emojis, no hashtags, no titles
+Rules:
+- Output STRICT JSON only
+- Hindi language only
+- No markdown, no explanations, no extra text
+- Each scene must contain:
+  - voiceoverText (1–2 sentences)
+  - imagePrompt (photorealistic cinematic description)
 
-OUTPUT FORMAT (STRICT JSON ONLY):
+JSON FORMAT:
 {{
   "scenes": [
     {{
@@ -27,14 +38,13 @@ INCIDENT:
 {transcript_text}
 """
 
-    result = subprocess.run(
-        ["ollama", "run", "mistral"],
-        input=prompt.encode("utf-8"),
-        text=True,
-        capture_output=True
+    response = client.models.generate_content(
+        model="models/gemini-flash-latest",
+        contents=prompt,
+        config={
+            "response_mime_type": "application/json",
+            "temperature": 0.3
+        }
     )
 
-    try:
-        return json.loads(result.stdout)
-    except json.JSONDecodeError:
-        raise ValueError("LLM output was not valid JSON")
+    return json.loads(response.text)
