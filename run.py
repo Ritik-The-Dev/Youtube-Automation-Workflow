@@ -16,10 +16,13 @@ def run():
             print("Empty transcript, skipping scene generation")
             continue    
         scene_data = generate_scenes(text)
-        print('Scenes Are Ready ',scene_data)
+        file_path = f"{vid}.txt"
+
+        with open(file_path, "w", encoding="utf-8") as file:
+            file.write(str(scene_data))
         response = create_movie(scene_data["scenes"])
-        response = check_status(response.project)
-        print("Submitted:", response)
+        status = check_status(response.project)
+        print("status of the video is :", status)
         break   # ONE VIDEO PER RUN
 
 if __name__ == "__main__":

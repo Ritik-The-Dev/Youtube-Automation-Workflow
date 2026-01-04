@@ -1,7 +1,6 @@
 import subprocess
 import os
 from youtube_transcript_api import YouTubeTranscriptApi
-from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
 def get_video_transcript(video_id):
     try:

@@ -18,7 +18,8 @@ Convert the following real incident into EXACTLY 5 scenes.
 
 Rules:
 - Output STRICT JSON only
-- Hindi language only
+- Hindi language only in voiceoverText
+- English language only in imagePrompt
 - No markdown, no explanations, no extra text
 - Each scene must contain:
   - voiceoverText (1–2 sentences)
