@@ -1,6 +1,6 @@
 import yt_dlp
 
-URL = "https://www.youtube.com/@PresidentOfIndia/videos"
+URL = "https://www.youtube.com/@PresidentOfIndia/search?query=gallantry"
 
 def fetch_latest(limit = 10):
     ydl_opts = {
