@@ -1,10 +1,8 @@
 import subprocess
 import os
 from youtube_transcript_api import YouTubeTranscriptApi
-from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
 def get_video_transcript(video_id):
-    # Attempt 1: youtube-transcript-api
     try:
         transcript = YouTubeTranscriptApi.get_transcript(
             video_id,
@@ -20,7 +18,7 @@ def get_video_transcript(video_id):
 
 def get_transcript_via_ytdlp(video_id):
     url = f"https://www.youtube.com/watch?v={video_id}"
-    output_file = f"data/transcripts/{video_id}.vtt"
+    output_file = f"data/transcripts/{video_id}.hi.vtt"
 
     cmd = [
         "yt-dlp",
@@ -33,7 +31,7 @@ def get_transcript_via_ytdlp(video_id):
     ]
 
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
+    output_file = os.path.abspath(output_file)
     if not os.path.exists(output_file):
         return ""
 

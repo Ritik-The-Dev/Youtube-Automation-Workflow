@@ -1,0 +1,15 @@
+# OAuth secrets (CRITICAL)
+client_secret.json
+token.json
+
+# Virtual environments
+venv/
+upload-env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
