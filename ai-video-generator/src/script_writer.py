@@ -63,31 +63,82 @@ client = genai.Client(
 def generate_scenes():
     # New prompt for generating the thrilling Indian Jawan story
     prompt = """
-    Transform the following real-life incident into an ultra-realistic, cinematic short film script. The story should be about a brave Indian soldier (Jawan) performing a courageous act. Condense the narrative into a dynamic, 30-60 second sequence with vivid, immersive details. The story should focus on the action and bravery of the soldier in the face of adversity.
+    You are a storyteller creating SHORT MORAL STORIES for KIDS (age 4–10),
+in the style of classic Indian stories like “लालची कचौड़ी वाला”, “जलपरी”,
+and simple village or fantasy tales.
 
-    For each scene:
-    - Focus on the action, drama, and thrill of the soldier’s courage.
-    - Create a photorealistic, cinematic image prompt for each scene.
-    - Write a powerful, engaging voiceover text (in Hindi), capturing the essence of the moment.
-    - The response must strictly follow the JSON format and must include a scene breakdown with:
-      - `voiceoverText`: 1–2 sentences in Hindi.
-      - `imagePrompt`: A photorealistic, detailed description in English.
+The story must be:
+- Simple
+- Beautiful
+- Child-safe
+- Light-hearted
+- With a clear moral lesson at the end
 
-    The incident should revolve around a dramatic, intense moment where the soldier shows immense bravery, possibly in the midst of an intense battle, a rescue mission, or facing a life-or-death situation.
+NO violence, NO fear, NO complex language.
 
-    JSON FORMAT:
-    {{
-      "scenes": [
-        {{
-          "voiceoverText": "...",
-          "imagePrompt": "..."
-        }},
-        ...
-      ]
-    }}
+━━━━━━━━━━━━━━━━━━
+STORY REQUIREMENTS:
 
-    INCIDENT:
-    A brave Indian soldier risks his life to rescue his comrades under heavy fire. Amidst the chaos of a fierce battle, he moves fearlessly through enemy lines to save a wounded soldier. With determination in his eyes, he fights through the storm of bullets, showing unparalleled bravery.
+- Duration: 30–60 seconds
+- Tone: magical, warm, innocent, storybook-style
+- Characters: simple (shopkeeper, child, fairy, animal, villager, etc.)
+- Moral themes (pick ONE):
+  honesty, kindness, sharing, greed is bad, helping others, truth wins
+
+━━━━━━━━━━━━━━━━━━
+TITLE & DESCRIPTION (VERY IMPORTANT FOR REACH):
+
+1. Generate a KID-FRIENDLY TITLE:
+   - Hindi or Hinglish
+   - 5–10 words
+   - Curious + emotional
+   - Examples:
+     “लालची कचौड़ी वाला 😲”
+     “जलपरी की प्यारी सीख 🧜‍♀️”
+     “ईमानदार बच्चा 🌟”
+
+2. Generate a SHORT DESCRIPTION:
+   - 2–3 simple lines
+   - Use emojis
+   - Include keywords:
+     kids story, moral story, Hindi kahani, short story
+   - End with: “पूरी कहानी देखो 👀”
+
+━━━━━━━━━━━━━━━━━━
+SCENE STRUCTURE:
+
+Break the story into 4–6 short scenes.
+
+For EACH scene:
+- `voiceoverText`:  
+  1–2 short Hindi sentences  
+  Very simple words (spoken Hindi, child-friendly)
+
+- `imagePrompt`:  
+  Colorful, soft, storybook-style illustration  
+  Bright lighting, expressive characters, magical feel  
+  (NOT photorealistic, NOT dark)
+
+━━━━━━━━━━━━━━━━━━
+STRICT JSON FORMAT (NO EXTRA TEXT):
+
+{
+  "title": "...",
+  "description": "...",
+  "scenes": [
+    {
+      "voiceoverText": "...",
+      "imagePrompt": "..."
+    }
+  ]
+}
+
+━━━━━━━━━━━━━━━━━━
+STORY SEED (CHANGE THIS EACH TIME):
+
+A greedy street food seller who learns a lesson,
+OR a magical mermaid who teaches kindness,
+OR any small character who learns a good habit.
     """
 
     # Call to the AI model

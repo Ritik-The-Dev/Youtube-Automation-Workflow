@@ -45,6 +45,7 @@
 
 
 import os
+import json
 from src.fetch_videos import fetch_latest
 from src.transcript import get_video_transcript
 from src.filter_story import is_bravery_story
@@ -61,7 +62,12 @@ def run():
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     
-    print(scene_data)
+    # Add Script to Folder
+    scriptPath = os.path.join(f"./data/File_To_Upload", f"Script.json")
+    with open(scriptPath, 'w', encoding="utf-8") as f:
+            json.dump(scene_data, f, ensure_ascii=False, indent=4)
+    
+    print("Scene generated successfully")
     
     # Generate images and audio for each scene
     for i in range(len(scene_data['scenes'])):
