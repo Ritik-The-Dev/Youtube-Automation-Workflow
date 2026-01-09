@@ -46,3 +46,15 @@
 2026-01-07 21:40:19,694 - INFO - Starting video generation
 2026-01-07 21:40:25,338 - INFO - Upload successful
 2026-01-07 21:40:25,338 - INFO - Sleeping for 4349 seconds
+2026-01-09 21:12:00,413 - INFO - Starting video generation
+2026-01-09 21:15:24,144 - ERROR - FAILED: Command '['ai-video-uploader/upload-env/Scripts/python.exe', '-m', 'src.watch_and_upload']' returned non-zero exit status 1.
+2026-01-09 21:15:24,144 - INFO - Sleeping for 4710 seconds
+2026-01-09 21:19:41,403 - INFO - Starting video generation
+2026-01-09 21:19:41,959 - ERROR - FAILED: Command '['ai-video-uploader/upload-env/Scripts/python.exe', '-m', 'src.watch_and_upload']' returned non-zero exit status 1.
+2026-01-09 21:19:41,959 - INFO - Sleeping for 3809 seconds
+2026-01-09 21:19:55,133 - INFO - Starting video generation
+2026-01-09 21:19:55,569 - ERROR - FAILED: Command '['ai-video-uploader/upload-env/Scripts/python.exe', '-m', 'src.watch_and_upload']' returned non-zero exit status 1.
+2026-01-09 21:19:55,569 - INFO - Sleeping for 2519 seconds
+2026-01-09 21:21:54,948 - INFO - Starting video generation
+2026-01-09 21:22:13,417 - INFO - Upload successful
+2026-01-09 21:22:13,418 - INFO - Sleeping for 3420 seconds

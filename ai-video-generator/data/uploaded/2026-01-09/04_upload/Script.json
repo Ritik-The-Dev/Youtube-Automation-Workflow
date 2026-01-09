@@ -1,0 +1,26 @@
+{
+    "title": "गोलू गिलहरी और जादुई अखरोट का रहस्य 🐿️",
+    "description": "यह है बच्चों की प्यारी कहानी! 🐿️\nजब गोलू गिलहरी ने लालच किया, तो क्या हुआ? 🤔\nkids story, moral story, Hindi kahani, short story. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "एक जंगल में गोलू नाम की एक छोटी गिलहरी रहती थी। उसे एक जादुई पेड़ मिला जिस पर सुनहरे अखरोट लगे थे।",
+            "imagePrompt": "A cute, innocent squirrel (Golu) looking up excitedly at a lush, brightly colored tree covered in glowing, golden walnuts. Soft, warm, storybook illustration style."
+        },
+        {
+            "voiceoverText": "गोलू ने सोचा, 'मैं ये सारे अखरोट अकेले खाऊंगा, किसी को नहीं दूंगा।' उसने जल्दी से सब जमा कर लिए और छिपा दिए।",
+            "imagePrompt": "Golu the squirrel burying a huge pile of golden walnuts in a secret hollow log. He looks slightly sneaky but happy. Bright, colorful storybook illustration."
+        },
+        {
+            "voiceoverText": "जब गोलू ने अखरोट खाने की कोशिश की, तो वे फीके और बेस्वाद हो गए। उनका सुनहरा रंग भी उड़ गया।",
+            "imagePrompt": "Golu sitting sadly next to a pile of dull, gray, tasteless walnuts. He looks confused and disappointed. Magical forest background, storybook style."
+        },
+        {
+            "voiceoverText": "गोलू रोने लगा। तभी उसने अपने दोस्तों को बुलाया और थोड़े अखरोट बाँट दिए। बाँटते ही अखरोट फिर से स्वादिष्ट हो गए!",
+            "imagePrompt": "Golu happily sharing the remaining golden walnuts with his smiling squirrel and rabbit friends. The nuts are glowing again. Bright, magical, innocent storybook illustration."
+        },
+        {
+            "voiceoverText": "गोलू ने सीखा कि खुशियाँ और अच्छी चीज़ें बाँटने से ही बढ़ती हैं। लालच करना अच्छी बात नहीं है।",
+            "imagePrompt": "A final scene showing Golu and his friends enjoying the nuts together under the magical tree. Text overlay: 'Moral: Sharing is caring.' Warm, happy storybook art."
+        }
+    ]
+}

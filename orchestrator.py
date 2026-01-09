@@ -19,11 +19,11 @@ def run_once():
         UPLOADER_PYTHON = "ai-video-uploader/upload-env/Scripts/python.exe" 
 
         # 1. Generate video
-        subprocess.run(
-            [GEN_PYTHON, "run.py"],
-            cwd="ai-video-generator",
-            check=True,
-        )
+        # subprocess.run(
+        #     [GEN_PYTHON, "run.py"],
+        #     cwd="ai-video-generator",
+        #     check=True,
+        # )
 
         # 2. Upload video
         subprocess.run(
