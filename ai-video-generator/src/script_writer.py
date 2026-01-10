@@ -63,45 +63,45 @@ client = genai.Client(
 def generate_scenes():
     # New prompt for generating the thrilling Indian Jawan story
     prompt = """
-    You are a storyteller creating SHORT MORAL STORIES for KIDS (age 4–10),
-in the style of classic Indian stories like “लालची कचौड़ी वाला”, “जलपरी”,
-and simple village or fantasy tales.
+You are a storyteller and food historian creating SHORT, ENGAGING STORIES
+about how FAMOUS INDIAN FOOD ITEMS were invented or traditionally made
+(like Jalebi, Rabri, Samosa, Lassi, Kulfi, etc.).
+
+The content is for SHORT VIDEO PLATFORMS.
 
 The story must be:
-- Simple
-- Beautiful
-- Child-safe
-- Light-hearted
-- With a clear moral lesson at the end
-
-NO violence, NO fear, NO complex language.
+- Simple and engaging
+- Family-friendly (kids + adults)
+- Rooted in Indian culture
+- Nostalgic and curious
+- Easy to understand
+- No modern slang, no complex history jargon
 
 ━━━━━━━━━━━━━━━━━━
-STORY REQUIREMENTS:
+CONTENT REQUIREMENTS:
 
 - Duration: 30–60 seconds
-- Tone: magical, warm, innocent, storybook-style
-- Characters: simple (shopkeeper, child, fairy, animal, villager, etc.)
-- Moral themes (pick ONE):
-  honesty, kindness, sharing, greed is bad, helping others, truth wins
+- Tone: warm, nostalgic, slightly magical, storytelling style
+- Setting: old India, villages, bazaars, royal kitchens, halwai shops
+- Focus: ONE food item per story
 
 ━━━━━━━━━━━━━━━━━━
 TITLE & DESCRIPTION (VERY IMPORTANT FOR REACH):
 
-1. Generate a KID-FRIENDLY TITLE:
+1. Generate a CURIOSITY-DRIVEN TITLE:
    - Hindi or Hinglish
    - 5–10 words
-   - Curious + emotional
+   - Emotional + mysterious
    - Examples:
-     “लालची कचौड़ी वाला 😲”
-     “जलपरी की प्यारी सीख 🧜‍♀️”
-     “ईमानदार बच्चा 🌟”
+     “जलेबी पहली बार कैसे बनी? 😲”
+     “रबड़ी की मीठी कहानी 🍯”
+     “समोसे का राज़ 🥟”
 
 2. Generate a SHORT DESCRIPTION:
    - 2–3 simple lines
    - Use emojis
    - Include keywords:
-     kids story, moral story, Hindi kahani, short story
+     Indian food story, food history, desi kahani, short story
    - End with: “पूरी कहानी देखो 👀”
 
 ━━━━━━━━━━━━━━━━━━
@@ -110,14 +110,16 @@ SCENE STRUCTURE:
 Break the story into 4–6 short scenes.
 
 For EACH scene:
-- `voiceoverText`:  
-  1–2 short Hindi sentences  
-  Very simple words (spoken Hindi, child-friendly)
+- `voiceoverText`:
+  1–2 short Hindi / Hinglish sentences
+  Spoken, simple, story-style narration
 
-- `imagePrompt`:  
-  Colorful, soft, storybook-style illustration  
-  Bright lighting, expressive characters, magical feel  
-  (NOT photorealistic, NOT dark)
+- `imagePrompt`:
+  Traditional Indian illustration style
+  Old halwai shop / village kitchen / royal rasoi
+  Warm lighting, steam, sweets, utensils
+  NOT photorealistic, NOT modern
+  Artistic, cinematic, nostalgic
 
 ━━━━━━━━━━━━━━━━━━
 STRICT JSON FORMAT (NO EXTRA TEXT):
@@ -136,10 +138,9 @@ STRICT JSON FORMAT (NO EXTRA TEXT):
 ━━━━━━━━━━━━━━━━━━
 STORY SEED (CHANGE THIS EACH TIME):
 
-A greedy street food seller who learns a lesson,
-OR a magical mermaid who teaches kindness,
-OR any small character who learns a good habit.
-    """
+The origin or making of ONE Indian food item,
+told as a simple, interesting story.
+"""
 
     # Call to the AI model
     response = client.models.generate_content(
