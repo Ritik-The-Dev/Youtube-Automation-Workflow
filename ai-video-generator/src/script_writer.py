@@ -60,9 +60,42 @@ client = genai.Client(
     api_key=os.environ["GEMINI_API_KEY"]
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "..", "data")
+TOPICS_FILE = os.path.join(DATA_DIR, "generatedTopics.json")
+
+
+def load_generated_topics(file_path=TOPICS_FILE):
+    if not os.path.exists(file_path):
+        return set()
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return set(data.get("topics", []))
+
+def save_generated_topic(topic, file_path=TOPICS_FILE):
+    topics = []
+
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            topics = data.get("topics", [])
+
+    if topic not in topics:
+        topics.append(topic)
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump({"topics": topics}, f, indent=4, ensure_ascii=False)
+
+
 def generate_scenes():
+  
+    used_topics = load_generated_topics()
+    used_topics_text = ", ".join(used_topics) if used_topics else "None"
+    
     # New prompt for generating the thrilling Indian Jawan story
-    prompt = """
+    prompt = f"""
 You are a storyteller and food historian creating SHORT, ENGAGING STORIES
 about how FAMOUS INDIAN FOOD ITEMS were invented or traditionally made
 (like Jalebi, Rabri, Samosa, Lassi, Kulfi, etc.).
@@ -121,19 +154,26 @@ For EACH scene:
   NOT photorealistic, NOT modern
   Artistic, cinematic, nostalgic
 
+IMPORTANT:
+❌ DO NOT generate a story about these food items:
+{used_topics_text}
+
+Pick a COMPLETELY NEW Indian food item not listed above.
+
 ━━━━━━━━━━━━━━━━━━
 STRICT JSON FORMAT (NO EXTRA TEXT):
 
-{
+{{
+  "foodItem": "NAME OF FOOD",
   "title": "...",
   "description": "...",
   "scenes": [
-    {
+    {{
       "voiceoverText": "...",
       "imagePrompt": "..."
-    }
+    }}
   ]
-}
+}}
 
 ━━━━━━━━━━━━━━━━━━
 STORY SEED (CHANGE THIS EACH TIME):
@@ -151,8 +191,13 @@ told as a simple, interesting story.
             "temperature": 0.3
         }
     )
+    result = json.loads(response.text)
+    food_item = result.get("foodItem")
 
-    return json.loads(response.text)
+    if food_item:
+        save_generated_topic(food_item)
+        
+    return result
 
 # Example usage
 if __name__ == "__main__":

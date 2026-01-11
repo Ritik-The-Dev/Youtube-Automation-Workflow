@@ -1,0 +1,27 @@
+{
+    "foodItem": "Gulab Jamun",
+    "title": "गुलाब जामुन का नाम कैसे पड़ा? 🌹",
+    "description": "भारत की सबसे नरम मिठाई का राज़! 👑 एक शाही रसोई की मीठी कहानी। Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, बादशाहों की रसोई में रोज़ नए और मीठे पकवान बनते थे।",
+            "imagePrompt": "Traditional Indian illustration style. A warm, bustling royal kitchen (Rasoi). Copper pots, milk boiling, and a head chef (Halwai) looking focused amidst steam and spices. Nostalgic lighting."
+        },
+        {
+            "voiceoverText": "एक दिन, शाही हलवाई ने बचे हुए खोये को गोलियाँ बनाकर घी में तल दिया।",
+            "imagePrompt": "Traditional Indian illustration. Close-up shot of a skilled Halwai rolling smooth, small balls of khoya dough. The background shows a large, traditional iron kadhai filled with golden, bubbling ghee."
+        },
+        {
+            "voiceoverText": "जब ये सुनहरी गोलियाँ तैयार हुईं, तो उन्हें केसर और गुलाब जल वाली चाशनी में डुबोया गया।",
+            "imagePrompt": "Traditional Indian illustration. Artistic depiction of deep red-orange saffron syrup (chaashni) being poured over the freshly fried khoya balls. Steam rising, emphasizing the sweet, floral aroma of rose water."
+        },
+        {
+            "voiceoverText": "चाशनी में भीगकर, ये गोलियाँ जामुन फल जैसी काली और नरम हो गईं।",
+            "imagePrompt": "Traditional Indian illustration. A beautiful, artistic plate of dark, syrupy Gulab Jamuns resting in a silver bowl. The texture looks incredibly soft and soaked. Warm, cinematic lighting."
+        },
+        {
+            "voiceoverText": "जामुन जैसा रंग और गुलाब की खुशबू! बस, तभी से इस शाही मिठाई का नाम 'गुलाब जामुन' पड़ गया।",
+            "imagePrompt": "Traditional Indian illustration. A nostalgic scene of a royal family or village elders happily sharing Gulab Jamun during a festive gathering. Focus on the joy and tradition of the sweet. Soft, golden light."
+        }
+    ]
+}

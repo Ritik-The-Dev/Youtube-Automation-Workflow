@@ -80,3 +80,32 @@
 2026-01-10 20:45:29,506 - INFO - Starting video generation
 2026-01-10 20:55:28,370 - INFO - Upload successful
 2026-01-10 20:55:28,372 - INFO - Sleeping for 2002 seconds
+2026-01-10 21:03:41,139 - INFO - Starting video generation
+2026-01-10 21:06:37,210 - INFO - Upload successful
+2026-01-10 21:06:37,210 - INFO - Sleeping for 3584 seconds
+2026-01-11 13:28:42,891 - INFO - Starting video generation
+2026-01-11 13:28:52,584 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-11 13:28:52,585 - INFO - Sleeping for 5285 seconds
+2026-01-11 15:42:41,551 - INFO - Starting video generation
+2026-01-11 15:45:51,573 - INFO - Upload successful
+2026-01-11 15:45:51,573 - INFO - Sleeping for 2713 seconds
+2026-01-11 17:06:27,144 - INFO - Starting video generation
+2026-01-11 18:00:14,974 - INFO - Upload successful
+2026-01-11 18:00:14,977 - INFO - Sleeping for 4625 seconds
+2026-01-11 18:33:06,051 - INFO - Starting video generation
+2026-01-11 18:33:09,655 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-11 18:33:09,655 - INFO - Sleeping for 5187 seconds
+2026-01-11 18:35:16,938 - INFO - Starting video generation
+2026-01-11 18:35:27,749 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-11 18:35:27,750 - INFO - Sleeping for 3292 seconds
+2026-01-11 18:37:50,835 - INFO - Starting video generation
+2026-01-11 18:39:27,874 - INFO - Starting video generation
+2026-01-11 18:42:55,120 - INFO - Starting video generation
+2026-01-11 18:45:31,079 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-11 18:45:31,082 - INFO - Sleeping for 3191 seconds
+2026-01-11 18:48:05,391 - INFO - Starting video generation
+2026-01-11 18:48:25,662 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-11 18:48:25,662 - INFO - Sleeping for 3892 seconds
+2026-01-11 18:48:33,895 - INFO - Starting video generation
+2026-01-11 18:51:05,999 - INFO - Upload successful
+2026-01-11 18:51:05,999 - INFO - Sleeping for 4001 seconds

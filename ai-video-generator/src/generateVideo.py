@@ -12,7 +12,7 @@ from src.generateAudio import generate_voice
 
 
 # ================= CONFIG =================
-VIDEO_SPEED = 1.25          # Default playback speed
+VIDEO_SPEED = 1.00          # Default playback speed
 BG_MUSIC_VOLUME = 0.15      # Background music volume
 FADE_IN_DURATION = 1        # seconds
 FPS = 24

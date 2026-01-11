@@ -4,7 +4,9 @@ import time
 
 # voice-422
 # voice-426
-def generate_voice(voiceOverText, sceneNumber, folderName, voice="voice-426", pitch=0, rate=0, max_retries=3):
+# voice-423
+
+def generate_voice(voiceOverText, sceneNumber, folderName, voice="voice-423", pitch=0, rate=0, max_retries=3):
     url = "https://speechma.com/com.api/tts-api.php"
     
     # Prepare the payload for the API request
