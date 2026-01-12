@@ -1,0 +1,31 @@
+{
+    "foodItem": "Dhokla",
+    "title": "ढोकले का नरम और जादुई राज़ ☁️",
+    "description": "गुजरात की रसोई से आया यह हल्का और फूला हुआ नाश्ता। 🍚 Steam और बेसन का कमाल! Indian food story, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पहले, गुजरात की रसोई में, दादी ने चावल और दाल को भिगोया।",
+            "imagePrompt": "Traditional Gujarati village kitchen, earthen pots, sunlight streaming in. An old woman (Dadi) is soaking rice and chana dal in large, polished brass vessels. Warm, nostalgic illustration style."
+        },
+        {
+            "voiceoverText": "रात भर, उस मिश्रण में एक छोटा सा जादू हुआ—वह धीरे-धीरे फूलने लगा।",
+            "imagePrompt": "Close-up on a large brass bowl covered with a clean white cloth. The batter inside is slightly bubbling, indicating fermentation. Soft, dark lighting suggesting nighttime, mystical feel."
+        },
+        {
+            "voiceoverText": "फिर उसे थाली में फैलाकर, भाप की गर्मी से पकाया गया।",
+            "imagePrompt": "A traditional steamer (dhokla maker) placed over a wood fire. Steam is rising dramatically. A golden-yellow batter is being carefully poured into a round plate inside the steamer. Cinematic, warm lighting."
+        },
+        {
+            "voiceoverText": "यह भाप ही ढोकले को रुई जैसा नरम और फूला हुआ बनाती है।",
+            "imagePrompt": "A tray of perfectly steamed, fluffy yellow dhokla squares being removed from the steamer. The texture is porous and soft, emphasizing the lightness. Traditional Indian art style."
+        },
+        {
+            "voiceoverText": "ऊपर से राई, करी पत्ता और हरी मिर्च का चटपटा तड़का लगा।",
+            "imagePrompt": "A small, hot pan sizzling with mustard seeds (rai) and curry leaves (kadi patta). The tempering oil is being poured over the tray of dhokla, creating a burst of flavor and aroma. Vibrant colors."
+        },
+        {
+            "voiceoverText": "बस! तैयार हो गया हमारा हल्का, फूला हुआ ढोकला। स्वाद ऐसा, जो सदियों से चला आ रहा है।",
+            "imagePrompt": "A close-up shot of a perfect piece of dhokla, garnished with fresh coriander and grated coconut, served on a traditional plate. Highly appetizing, soft focus, nostalgic feel."
+        }
+    ]
+}

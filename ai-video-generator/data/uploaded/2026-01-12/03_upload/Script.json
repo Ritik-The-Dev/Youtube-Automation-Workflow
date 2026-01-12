@@ -1,0 +1,27 @@
+{
+    "foodItem": "Rasgulla",
+    "title": "रसगुल्ला इतना स्पंजी कैसे बना? 🤫",
+    "description": "बंगाल की सबसे मीठी गलती! 🥛 A soft, spongy Indian food story. Food history, desi kahani, short story. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, बंगाल की रसोई में दूध से मिठाई बनाना एक कला थी। हर हलवाई को अपनी कारीगरी पर गर्व था।",
+            "imagePrompt": "Traditional Bengali kitchen (Rasoi). Warm light, copper pots, a sweet maker (Halwai) stirring milk over a clay stove (chulha). Nostalgic illustration style."
+        },
+        {
+            "voiceoverText": "पर एक दिन, दूध अचानक फट गया— बन गया छेना, जिसे सब बेकार समझते थे और फेंक देते थे।",
+            "imagePrompt": "Close-up of a large pot where milk has just curdled into chhena. The halwai looks surprised but thoughtful, contemplating the 'wasted' milk. Traditional Indian art style."
+        },
+        {
+            "voiceoverText": "लेकिन एक चतुर कारीगर ने छेने को फेंका नहीं। उसने उसे घंटों तक मसलकर, छोटी-छोटी गेंदें बना दीं।",
+            "imagePrompt": "A halwai with flour-dusted hands, meticulously kneading soft chhena into perfect small balls on a wooden board. Focus on the texture and the effort. Warm, cinematic lighting."
+        },
+        {
+            "voiceoverText": "फिर इन नाजुक गेंदों को उबलती हुई चाशनी में डाल दिया। और हुआ एक मीठा जादू!",
+            "imagePrompt": "Dramatic illustration of small white chhena balls being dropped into a large, bubbling pot of thick sugar syrup (chaashni). Steam rising, golden light, high contrast."
+        },
+        {
+            "voiceoverText": "छेने की गेंदें फूलकर, रस से भरकर, एकदम स्पंजी हो गईं। यही है रसगुल्ला, जो आज भी दिल जीत लेता है।",
+            "imagePrompt": "A beautiful, artistic shot of Rasgullas being served in a traditional clay bowl (matka) or thali, dripping with syrup. Focus on the soft, spongy texture and the sweetness. Traditional Indian miniature painting style."
+        }
+    ]
+}

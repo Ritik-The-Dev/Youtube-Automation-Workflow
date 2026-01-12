@@ -1,0 +1,27 @@
+{
+    "foodItem": "Jalebi",
+    "title": "जलेबी का टेढ़ा-मेढ़ा राज़ क्या है? 🍯",
+    "description": "Jalebi, the spiral sweet, has a fascinating history! 👑\nA sweet Indian food story about invention and celebration. Desi kahani, food history. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, जब भी कोई बड़ी खुशी होती थी, तो मीठा ज़रूरी था। पर लोग एक नई, मज़ेदार मिठाई चाहते थे।",
+            "imagePrompt": "Nostalgic illustration of a bustling ancient Indian bazaar at dusk. People celebrating a festival. Warm, inviting light. Traditional Indian art style."
+        },
+        {
+            "voiceoverText": "एक चतुर हलवाई ने सोचा, क्यों न एक ऐसी मिठाई बने जो दिखने में भी कमाल हो और खाने में कुरकुरी।",
+            "imagePrompt": "Warm illustration of an old halwai (sweet maker) in his small, rustic shop. He is looking thoughtfully at a winding pattern, perhaps a coil of rope or a decorative carving, seeking inspiration. Traditional Indian miniature painting style."
+        },
+        {
+            "voiceoverText": "उसने उड़द दाल के घोल को कपड़े में भरा, और गरम घी में गोल-गोल घुमाकर डाला। यह एक जादुई कला थी।",
+            "imagePrompt": "Close-up, cinematic illustration of the halwai squeezing the fermented batter through a cloth bag into a large, shallow iron kadhai filled with bubbling, golden ghee. Steam rising dramatically. Focus on the spiral shape forming."
+        },
+        {
+            "voiceoverText": "जैसे ही वो सुनहरी और कुरकुरी हुई, उसे तुरंत केसर और इलायची की खुशबू वाली चाशनी में डुबो दिया गया।",
+            "imagePrompt": "Magical illustration of bright orange, hot spirals being quickly dipped into a thick, shimmering saffron syrup (chashni) in a brass vessel. The syrup looks glossy and rich. Warm, golden lighting."
+        },
+        {
+            "voiceoverText": "बस, इस टेढ़ी-मेढ़ी, रस भरी मिठाई का नाम पड़ा 'जलेबी'! आज भी यह हर त्योहार की शान है।",
+            "imagePrompt": "Final illustration of a beautiful, ornate brass plate piled high with glistening, fresh Jalebis, garnished with pistachios. Happy, smiling faces of villagers enjoying the sweet in the background. Traditional Indian illustration style."
+        }
+    ]
+}

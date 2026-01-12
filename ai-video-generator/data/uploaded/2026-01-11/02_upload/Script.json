@@ -1,0 +1,23 @@
+{
+    "foodItem": "Masala Chai",
+    "title": "चाय की पत्ती भारत कैसे आई? ☕️",
+    "description": "हर सुबह की शुरुआत, इस गरमा गरम कहानी से. 🇮🇳 Indian food story, food history. देसी कहानी जो दिल छू ले. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "बहुत पहले, यह पत्ती सिर्फ़ एक विदेशी तोहफ़ा थी, जिसे लोग कड़वी दवा समझते थे।",
+            "imagePrompt": "Traditional Indian illustration style. Sepia-toned image of a vast tea plantation in Assam during the early 1900s. Workers are plucking leaves, looking cautious. Warm, hazy light."
+        },
+        {
+            "voiceoverText": "भारत के लोगों को लगा, इसमें कुछ मीठा और अपनापन चाहिए। यह सादा पानी नहीं, दिल का सुकून बनना था।",
+            "imagePrompt": "Traditional Indian illustration style. A village kitchen (rasoi), a woman stirring a large brass pot over a wood fire. She looks thoughtful, trying to figure out how to improve the taste. Steam is rising dramatically."
+        },
+        {
+            "voiceoverText": "तब किसी दादी माँ ने इसमें अदरक, इलायची और लौंग का जादू मिलाया। हर मसाला एक नया राज़ खोल गया।",
+            "imagePrompt": "Traditional Indian illustration style. Close-up shot of hands crushing fresh ginger, cardamom pods, and cloves in a stone mortar (sil batta). The spices release aromatic steam. Warm, golden lighting."
+        },
+        {
+            "voiceoverText": "दूध और चीनी के साथ, यह बन गई हमारी 'मसाला चाय'—हर गली, हर नुक्कड़ की जान और हर रिश्ते की शुरुआत।",
+            "imagePrompt": "Traditional Indian illustration style. A nostalgic scene of a bustling village chai tapri (stall). The chaiwala is pouring steaming tea into small clay cups (kulhads). People are gathered, smiling. Morning light, cinematic and warm."
+        }
+    ]
+}

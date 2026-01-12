@@ -1,0 +1,27 @@
+{
+    "foodItem": "Samosa",
+    "title": "समोसा भारत कैसे आया? उसका असली राज़ 🤫",
+    "description": "ये है समोसे की अनोखी कहानी। 🥟 सफरनामा मध्य एशिया से भारत तक। Indian food story, desi kahani, short story. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पहले, भारत की रसोई में यह त्रिकोण नहीं था।",
+            "imagePrompt": "Traditional Indian illustration style. Ancient Indian marketplace bustling with activity, but the food stalls show only traditional Indian sweets and flatbreads. Warm, nostalgic lighting."
+        },
+        {
+            "voiceoverText": "यह कहानी शुरू होती है दूर देशों से आए यात्रियों के साथ, जो अपने साथ एक छोटा, भरा हुआ नाश्ता लाए थे।",
+            "imagePrompt": "Artistic depiction of a caravan of travelers entering India through a mountain pass. They are carrying small, triangular pastries wrapped in cloth, meant for long journeys. Cinematic, traditional art style."
+        },
+        {
+            "voiceoverText": "भारत आकर, इस विदेशी नाश्ते ने अपना रूप बदला—जब इसमें आलू, मटर और देसी मसाले मिले।",
+            "imagePrompt": "A busy royal kitchen (rasoi) scene. A village cook is experimenting, mixing vibrant Indian spices, boiled potatoes (aloo), and peas into the pastry dough. Steam rising, traditional copper utensils."
+        },
+        {
+            "voiceoverText": "यह तेल में तला गया, कुरकुरा बना, और इसका नाम पड़ा 'समोसा'—यानी 'त्रिकोण'।",
+            "imagePrompt": "A happy halwai (snack maker) frying golden brown Samosas in a large, deep kadhai over a wood fire. The Samosas are perfectly shaped. Focus on the golden texture and the heat of the fire."
+        },
+        {
+            "voiceoverText": "गरमा गरम समोसा और चटनी—यह सिर्फ़ नाश्ता नहीं, यह है हमारी देसी कहानी, जो हर गली में ज़िंदा है।",
+            "imagePrompt": "Close-up shot of a perfectly fried Samosa being served with vibrant green mint chutney and dark tamarind chutney on a traditional leaf plate (patta). Focus on warmth and inviting texture. Traditional Indian illustration."
+        }
+    ]
+}

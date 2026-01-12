@@ -1,0 +1,31 @@
+{
+    "foodItem": "Pani Puri (Golgappa)",
+    "title": "पानी पूरी का महाभारत कनेक्शन? 😲",
+    "description": "क्या आपको पता है कि गोलगप्पे कैसे बने? यह है सबसे चटपटी Indian food story. Draupadi की रसोई से निकली यह desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पुरानी बात है, जब द्रौपदी को एक मुश्किल काम मिला।",
+            "imagePrompt": "Traditional Indian illustration style. A simple, rustic village kitchen (rasoi) setting. Draupadi looking thoughtful, surrounded by minimal ingredients (a small bowl of atta, some potatoes). Warm, earthy tones."
+        },
+        {
+            "voiceoverText": "उन्हें थोड़े से आटे और कुछ आलू से पाँचों पांडवों का पेट भरना था।",
+            "imagePrompt": "Cinematic, nostalgic illustration. Close-up on Draupadi's hands kneading a tiny amount of dough on a wooden chakla. Focus on the scarcity of ingredients. Soft, focused lighting."
+        },
+        {
+            "voiceoverText": "तब उन्होंने आटे की छोटी-छोटी पूरियां बनाईं, जो तेल में फूलकर कुरकुरी हो गईं।",
+            "imagePrompt": "Artistic illustration of a traditional chulha (clay stove). Small, puffed puris frying in hot oil in a kadhai. Steam rising. Joyful, inventive atmosphere."
+        },
+        {
+            "voiceoverText": "और साथ में बनाया इमली और मसालों का तीखा, ठंडा पानी।",
+            "imagePrompt": "Traditional Indian illustration. A large, ornate brass vessel holding the 'pani'. Hands carefully mixing spices (tamarind, mint) and water. Vibrant green and brown colors."
+        },
+        {
+            "voiceoverText": "हर पुरी में मसाला भरा, और उसे पानी में डुबोकर परोसा गया।",
+            "imagePrompt": "Nostalgic illustration showing the first 'pani puri' being assembled. Focus on the delicate process of filling the puri. Warm, golden light."
+        },
+        {
+            "voiceoverText": "बस, ऐसे ही जन्म हुआ भारत के सबसे प्यारे स्ट्रीट फूड, पानी पूरी का! वाह!",
+            "imagePrompt": "Traditional Indian illustration showing the five Pandavas happily eating the small, filled puris. Draupadi smiling. Focus on the joy and satisfaction. Artistic, cinematic style."
+        }
+    ]
+}

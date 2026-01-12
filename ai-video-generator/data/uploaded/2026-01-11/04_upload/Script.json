@@ -1,0 +1,31 @@
+{
+    "foodItem": "Kulfi",
+    "title": "कुल्फी: मुग़ल बादशाहों का ठंडा राज़ 👑",
+    "description": "दूध को घंटों पकाया जाता था, फिर बर्फ़ में जमाया जाता था. 🧊 ये है कुल्फी की शाही कहानी. Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पहले, दिल्ली के शाही रसोई में, एक जादुई, ठंडा व्यंजन तैयार होता था.",
+            "imagePrompt": "Mughal royal kitchen (rasoi). Chefs in traditional attire stirring large copper vessels over a slow fire. Warm, cinematic lighting. Traditional Indian illustration style."
+        },
+        {
+            "voiceoverText": "यह थी कुल्फी—जिसे बनाने में सबसे ज़्यादा ज़रूरी था सब्र और धीमी आंच.",
+            "imagePrompt": "Close-up of thick, creamy milk (rabri base) being stirred in a heavy-bottomed handi. The milk is reduced and caramelized. Steam rising. Nostalgic illustration."
+        },
+        {
+            "voiceoverText": "दूध को घंटों पकाया जाता, जब तक वह गाढ़ा होकर मलाईदार रबड़ी न बन जाए, फिर उसमें केसर और इलायची मिलाई जाती.",
+            "imagePrompt": "A hand adding saffron strands and crushed pistachios to the rich, reduced milk mixture. Focus on the vibrant colors and texture. Traditional metal kulfi molds nearby."
+        },
+        {
+            "voiceoverText": "लेकिन फ्रिज कहाँ था? कुल्फी को जमाने का तरीका था सबसे अनोखा और शाही.",
+            "imagePrompt": "A large earthen pot (matka) being filled with crushed ice and rock salt. Metal kulfi molds (sancha) are being carefully placed inside the mixture. Rustic, ancient technique illustration."
+        },
+        {
+            "voiceoverText": "बर्फ़ और नमक के मिश्रण में दबाकर, यह धीरे-धीरे जमती थी, जिससे इसे मिलता था अपना अनोखा, दानेदार स्वाद.",
+            "imagePrompt": "A close-up of the frozen kulfi being carefully removed from the mold. The texture is dense and icy. Warm, nostalgic lighting."
+        },
+        {
+            "voiceoverText": "यह धीमी मेहनत ही कुल्फी को उसका असली स्वाद देती है—जो आज भी हर पीढ़ी को पसंद है.",
+            "imagePrompt": "A happy family (father and child) enjoying kulfi served in small earthen pots (kulhad) in an old Indian bazaar setting. Traditional Indian illustration style, focusing on joy and sweetness."
+        }
+    ]
+}
