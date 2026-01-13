@@ -1,0 +1,23 @@
+{
+    "foodItem": "Rabri",
+    "title": "दूध से मलाई कैसे बनी रबड़ी? 🍯",
+    "description": "यह है रबड़ी की मीठी और धीमी कहानी। 🥛\nIndian food story | food history | desi kahani.\nपूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, दूध को घंटों तक धीमी आंच पर उबाला जाता था। यह सिर्फ़ भोजन नहीं, बल्कि एक तपस्या थी।",
+            "imagePrompt": "Traditional Indian village kitchen, large brass vessel (degh) over a slow wood fire, a woman stirring the milk patiently, warm golden light, traditional Indian illustration style."
+        },
+        {
+            "voiceoverText": "जैसे-जैसे दूध गाढ़ा होता गया, किनारे पर मलाई की मोटी परत जमने लगी। यह था धीरज का मीठा इंतज़ार।",
+            "imagePrompt": "Close-up shot of the boiling milk, thick layers of cream (malai) forming on the inner walls of the vessel, steam rising gently, cinematic and nostalgic illustration."
+        },
+        {
+            "voiceoverText": "किसी चतुर हलवाई ने इस गाढ़ी मलाई को धीरे से इकट्ठा किया, उसमें चीनी और इलायची का जादू मिलाया।",
+            "imagePrompt": "A skilled halwai (sweet maker) in a bustling old bazaar shop, carefully scraping the malai and mixing it with sugar and cardamom in a wide pan, focus on the hands and ingredients."
+        },
+        {
+            "voiceoverText": "और बस, दूध की यह धीमी तपस्या 'रबड़ी' बन गई—एक शाही, मलाईदार मिठास जो आज भी दिल जीत लेती है।",
+            "imagePrompt": "A beautiful, artistic rendering of Rabri served in traditional clay pots (kulhad), garnished lavishly with saffron strands and chopped pistachios, rich texture, warm lighting, traditional Indian illustration style."
+        }
+    ]
+}

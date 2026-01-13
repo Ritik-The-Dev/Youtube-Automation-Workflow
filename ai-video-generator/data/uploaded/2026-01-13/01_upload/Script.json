@@ -1,0 +1,27 @@
+{
+    "foodItem": "Biryani",
+    "title": "बिरयानी का शाही राज़ क्या है? 👑",
+    "description": "मुग़ल रसोई से निकला यह खुशबूदार ख़ज़ाना. 🍚🍗 इसकी शाही कहानी सुनो! Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पहले, मुग़ल सेना को चाहिए था ऐसा भोजन जो पेट भरे और ताक़त दे.",
+            "imagePrompt": "Traditional Indian illustration style. Large Mughal army camp kitchen, massive copper pots over warm firelight, busy cooks preparing food in a dusty, historical setting."
+        },
+        {
+            "voiceoverText": "कहते हैं, बेगम मुमताज़ महल ने देखा कि सिपाही कमज़ोर हो रहे हैं और उन्हें पोषण की ज़रूरत है.",
+            "imagePrompt": "Traditional Indian illustration style. A beautiful Mughal queen (Mumtaz Mahal) observing soldiers from a palace window or tent, looking concerned. Warm, nostalgic lighting."
+        },
+        {
+            "voiceoverText": "उन्होंने शाही बावर्ची को बुलाया और कहा: चावल, मांस और मसाले एक साथ पकाओ, ताकि यह स्वादिष्ट और पौष्टिक हो.",
+            "imagePrompt": "Traditional Indian illustration style. Close-up of a royal chef carefully layering fragrant basmati rice, marinated meat, and saffron strands inside a large copper 'handi' (pot). Steam rising gently."
+        },
+        {
+            "voiceoverText": "फिर उस हांडी को आटे से सील किया गया, ताकि खुशबू और स्वाद अंदर ही रहे. इसे 'दम' कहते हैं.",
+            "imagePrompt": "Traditional Indian illustration style. A cook sealing the lid of a copper handi with dough (atta), placing it over slow embers. Focus on the sealed pot and the intense heat/steam, warm lighting."
+        },
+        {
+            "voiceoverText": "बस, इसी तरह जन्म हुआ बिरयानी का—जो आज भी हर दावत की जान है और शाही स्वाद देता है!",
+            "imagePrompt": "Traditional Indian illustration style. A beautifully decorated Biryani handi being opened at a royal feast, vibrant colors of saffron and spices visible, people smiling, nostalgic and cinematic."
+        }
+    ]
+}
