@@ -1,0 +1,23 @@
+{
+    "foodItem": "Kachori",
+    "title": "कचोरी का कुरकुरा राज़ क्या है? 🤫",
+    "description": "Kachori की अनोखी Indian food story. 🥟🔥 यह कुरकुरा नाश्ता कैसे बना? Desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, जब लोग लंबी यात्रा पर निकलते थे, तो उन्हें एक ऐसे नाश्ते की ज़रूरत थी जो पेट भरे और ख़राब न हो।",
+            "imagePrompt": "Traditional Indian illustration style. A dusty, busy trade route or bazaar scene. Travelers resting under a large banyan tree, looking hungry. Warm, golden lighting."
+        },
+        {
+            "voiceoverText": "तब एक चतुर हलवाई ने सोचा: क्यों न आटे को दाल और मसालों के ख़ज़ाने से भर दिया जाए?",
+            "imagePrompt": "Traditional Indian illustration style. Close-up of an old, wise-looking halwai (sweet maker) in his shop, surrounded by large brass utensils and sacks of lentils (dal). He has a thoughtful, inspired expression."
+        },
+        {
+            "voiceoverText": "उन्होंने दाल को पीसा, तीखे मसाले मिलाए, और उसे गोल आटे में भरकर, धीमी आँच पर सुनहरा होने तक तला।",
+            "imagePrompt": "Traditional Indian illustration style. A village kitchen scene. Focus on hands expertly sealing the dough balls (kachoris). Warm oil bubbling gently in a large iron kadhai (wok). Steam rising, nostalgic feel."
+        },
+        {
+            "voiceoverText": "और बस! जन्म हुआ कुरकुरी, मसालेदार कचोरी का—जो आज भी हर गली और नुक्कड़ की शान है।",
+            "imagePrompt": "Traditional Indian illustration style. A stack of perfectly golden-brown, crispy kachoris being served on a traditional leaf plate (pattal) with vibrant green and red chutneys. Joyful, cinematic, nostalgic scene."
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "foodItem": "Barfi (Milk Fudge)",
+    "title": "बर्फी का नाम बर्फी क्यों पड़ा? 🥛",
+    "description": "दूध और चीनी का मीठा जादू। 👑 Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, मिठाई बनाना एक तपस्या थी। सबसे पहले, शुद्ध दूध को घंटों तक पकाया जाता था।",
+            "imagePrompt": "Traditional Indian illustration style. A village kitchen (rasoi) at dawn. A woman stirring a large, heavy brass vessel (kadhai) over a slow wood fire. Warm, smoky light and steam rising. Focus on the patience of the cook."
+        },
+        {
+            "voiceoverText": "यह धीमी आँच का कमाल था, जो दूध को गाढ़ा करके मलाईदार 'खोया' में बदल देता था। यही बर्फी का दिल है।",
+            "imagePrompt": "Traditional Indian illustration style. Close-up shot of thick, creamy khoya being formed in a heavy iron kadhai. The texture is rich and granular. Focus on the traditional utensils and the slow cooking process."
+        },
+        {
+            "voiceoverText": "खोया में चीनी और इलायची मिलाकर, इस मिश्रण को एक बड़ी थाली में फैलाया जाता था, ठंडा होने के लिए।",
+            "imagePrompt": "Traditional Indian illustration style. A skilled halwai (sweet maker) carefully spreading the thick, sweet mixture onto a large, flat silver tray (thali). The mixture is steaming slightly and beginning to set. Nostalgic setting of an old halwai shop."
+        },
+        {
+            "voiceoverText": "जब यह जम जाता, तो इसे बर्फ़ जैसी चौकोर टुकड़ों में काटा जाता। इसीलिए इसका नाम पड़ा – बर्फी! मीठा और ठंडा।",
+            "imagePrompt": "Traditional Indian illustration style. A hand cutting the set white sweet into perfect square shapes using a traditional knife. The pieces look pristine and white, resembling fresh snow (barf). Cinematic, warm lighting."
+        }
+    ]
+}

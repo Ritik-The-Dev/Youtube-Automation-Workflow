@@ -1,0 +1,31 @@
+{
+    "foodItem": "Modak",
+    "title": "गणेश जी का प्रिय मोदक कैसे बना? 🙏",
+    "description": "Lord Ganesha's favorite sweet ki kahani. 🐘\nCoconut aur gud ka jaadu. ✨\nIndian food story | desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने समय की बात है, जब गणेश जी को मीठा खाने का बहुत मन करता था, पर उन्हें कुछ खास चाहिए था।",
+            "imagePrompt": "Traditional Indian illustration style. A playful young Lord Ganesha sitting in a serene ashram setting, looking eagerly at a plate of sweets, warm golden lighting."
+        },
+        {
+            "voiceoverText": "माता पार्वती ने सोचा, ऐसा कौन सा पकवान हो जो एक बार में ही पेट भर दे और मन को शांति दे?",
+            "imagePrompt": "Traditional Indian illustration style. Mata Parvati in an ancient, simple rasoi (kitchen), looking thoughtfully at ingredients like rice flour and jaggery, soft, earthy tones."
+        },
+        {
+            "voiceoverText": "उन्होंने चावल के आटे में नारियल और गुड़ का मिश्रण भरा, और उसे कमल की कली जैसा सुंदर आकार दिया।",
+            "imagePrompt": "Traditional Indian illustration style. Close-up shot of skilled hands shaping the Modak dough into its signature pleated form. Focus on the delicate artistry, steam rising gently from a nearby vessel."
+        },
+        {
+            "voiceoverText": "यह पकवान भाप में पकाया गया, ताकि इसकी मिठास और खुशबू शुद्ध बनी रहे।",
+            "imagePrompt": "Traditional Indian illustration style. A large, rustic steamer (patra) over a wood fire in an old village kitchen, steam billowing out, creating a magical, hazy effect."
+        },
+        {
+            "voiceoverText": "जब गणेश जी ने यह गरमा गरम मोदक खाया, तो वह खुशी से झूम उठे और इसे अपना सबसे प्रिय भोग बताया।",
+            "imagePrompt": "Traditional Indian illustration style. Lord Ganesha happily holding and eating a Modak, smiling broadly. The scene is bright and blessed, with a warm, glowing light around him."
+        },
+        {
+            "voiceoverText": "बस, तभी से यह 'मोदक' कहलाया, जिसका अर्थ है 'खुशी देने वाला'.",
+            "imagePrompt": "Traditional Indian illustration style. A beautifully arranged plate of perfectly steamed Modaks, perhaps garnished with saffron, sitting on a banana leaf or traditional thali. Nostalgic, cinematic illustration."
+        }
+    ]
+}

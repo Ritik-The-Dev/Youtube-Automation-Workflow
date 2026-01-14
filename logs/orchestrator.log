@@ -143,3 +143,39 @@
 2026-01-13 07:45:30,034 - INFO - Starting video generation
 2026-01-13 07:48:18,589 - INFO - Upload successful
 2026-01-13 07:48:18,590 - INFO - Sleeping for 2680 seconds
+2026-01-13 17:25:26,534 - INFO - Starting video generation
+2026-01-13 17:27:53,214 - INFO - Upload successful
+2026-01-13 17:27:53,217 - INFO - Sleeping for 2280 seconds
+2026-01-13 17:35:46,878 - INFO - Starting video generation
+2026-01-13 17:41:30,905 - INFO - Upload successful
+2026-01-13 17:41:30,907 - INFO - Sleeping for 4252 seconds
+2026-01-13 18:52:22,941 - INFO - Starting video generation
+2026-01-13 18:57:27,179 - INFO - Upload successful
+2026-01-13 18:57:27,184 - INFO - Sleeping for 1915 seconds
+2026-01-13 19:42:46,124 - INFO - Starting video generation
+2026-01-13 19:46:19,595 - INFO - Upload successful
+2026-01-13 19:46:19,597 - INFO - Sleeping for 3620 seconds
+2026-01-13 20:46:39,616 - INFO - Starting video generation
+2026-01-13 20:47:35,827 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-13 20:47:35,830 - INFO - Sleeping for 4851 seconds
+2026-01-13 21:00:24,756 - INFO - Starting video generation
+2026-01-13 21:04:50,330 - INFO - Upload successful
+2026-01-13 21:04:50,333 - INFO - Sleeping for 3627 seconds
+2026-01-13 22:05:21,302 - INFO - Starting video generation
+2026-01-13 22:05:37,900 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-13 22:05:37,902 - INFO - Sleeping for 4910 seconds
+2026-01-13 23:27:29,367 - INFO - Starting video generation
+2026-01-14 08:17:07,265 - INFO - Upload successful
+2026-01-14 08:17:07,273 - INFO - Sleeping for 1949 seconds
+2026-01-14 08:49:36,300 - INFO - Starting video generation
+2026-01-14 08:52:26,881 - INFO - Upload successful
+2026-01-14 08:52:26,882 - INFO - Sleeping for 3644 seconds
+2026-01-14 09:53:10,898 - INFO - Starting video generation
+2026-01-14 09:58:39,981 - INFO - Upload successful
+2026-01-14 09:58:39,983 - INFO - Sleeping for 5020 seconds
+2026-01-14 10:03:16,167 - INFO - Starting video generation
+2026-01-14 10:06:48,918 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-14 10:06:48,919 - INFO - Sleeping for 4653 seconds
+2026-01-14 10:10:56,531 - INFO - Starting video generation
+2026-01-14 10:11:50,495 - INFO - Upload successful
+2026-01-14 10:11:50,495 - INFO - Sleeping for 4705 seconds

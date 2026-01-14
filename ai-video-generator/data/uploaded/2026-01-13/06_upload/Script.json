@@ -1,0 +1,27 @@
+{
+    "foodItem": "Gajar Ka Halwa",
+    "title": "गाजर के हलवे की मीठी सर्दी 🥕",
+    "description": "सर्दी की सबसे प्यारी मिठाई की कहानी। 🥕🔥 Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "बहुत पुरानी बात है, जब उत्तर भारत में कड़ाके की ठंड पड़ती थी और हर घर को गर्माहट चाहिए थी।",
+            "imagePrompt": "Traditional Indian illustration style. A cozy, snow-dusted village scene in North India. Warm light spilling from a small, rustic kitchen window. Nostalgic, cinematic."
+        },
+        {
+            "voiceoverText": "किसान अपनी लाल-लाल, मीठी गाजरें लेकर आते, जो सिर्फ़ सर्दियों में ही सबसे अच्छी मिलती थीं।",
+            "imagePrompt": "Traditional Indian illustration style. A farmer proudly holding a basket full of vibrant red Delhi carrots (gajar). Focus on the rich color and texture. Warm lighting."
+        },
+        {
+            "voiceoverText": "दादी माँ ने सोचा, क्यों न इन गाजरों को घंटों तक दूध और घी के साथ धीमी आँच पर पकाया जाए।",
+            "imagePrompt": "Traditional Indian illustration style. An old woman (Dadi Ma) sitting near a wood fire, patiently grating red carrots into a large brass plate. Focus on traditional utensils and warm kitchen setting."
+        },
+        {
+            "voiceoverText": "बस, फिर क्या था! घंटों की मेहनत से दूध सूखता गया और गाजरें मलाईदार हलवा बन गईं।",
+            "imagePrompt": "Traditional Indian illustration style. A large, heavy brass kadhai over a wood fire. Steam rising, filled with thick, rich Gajar Ka Halwa glistening with ghee. Focus on the slow, patient cooking process."
+        },
+        {
+            "voiceoverText": "इलायची और मेवों का जादू मिला, और तैयार हो गई सर्दी को हराने वाली सबसे प्यारी मिठाई।",
+            "imagePrompt": "Traditional Indian illustration style. Close-up shot of the finished Gajar Ka Halwa being garnished with pistachios and almonds. Golden, warm lighting. Artistic and cinematic."
+        }
+    ]
+}

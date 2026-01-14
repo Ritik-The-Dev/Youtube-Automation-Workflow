@@ -7,10 +7,6 @@ from moviepy.editor import (
     vfx
 )
 
-from src.generateImage import generate_image
-from src.generateAudio import generate_voice
-
-
 # ================= CONFIG =================
 VIDEO_SPEED = 1.00          # Default playback speed
 BG_MUSIC_VOLUME = 0.15      # Background music volume
@@ -32,21 +28,9 @@ def generate_video(vid, scene_data, folder_path):
 
     # ---------- Scene Loop ----------
     for i, scene in enumerate(scene_data["scenes"]):
-        voice_text = scene["voiceoverText"]
-        image_prompt = scene["imagePrompt"]
-
-        generate_image(image_prompt, i, vid)
-        audio_path = generate_voice(voice_text, i, vid)
-
-        if not audio_path or not os.path.exists(audio_path):
-            print(f"[WARN] Skipping scene {i}: audio not generated")
-            continue
 
         image_path = os.path.join(folder_path, f"Image{i}.png")
-
-        if not os.path.exists(image_path):
-            print(f"[WARN] Skipping scene {i}: image missing")
-            continue
+        audio_path = os.path.join(folder_path, f"Scene{i}.mp3")
 
         # ---------- Load Clips ----------
         image_clip = ImageClip(image_path)

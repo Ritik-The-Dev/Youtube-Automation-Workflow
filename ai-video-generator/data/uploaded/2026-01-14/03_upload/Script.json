@@ -1,0 +1,27 @@
+{
+    "foodItem": "Vada Pav",
+    "title": "गरीब आदमी का बर्गर, वड़ा पाव का राज़! 🌶️",
+    "description": "मुंबई की सड़कों पर जन्मा यह नाश्ता। 🥔🍔 Indian food story, food history. यह है वड़ा पाव की desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुरानी बम्बई की सड़कों पर, मज़दूरों को चाहिए था सस्ता और पेट भरने वाला खाना।",
+            "imagePrompt": "Traditional Indian illustration style, busy 1960s Bombay street scene, men in simple clothes rushing to work, warm morning light, nostalgic feel."
+        },
+        {
+            "voiceoverText": "एक छोटे से ठेले वाले ने सोचा, आलू की भाजी को पाव के साथ क्यों न परोसा जाए?",
+            "imagePrompt": "Artistic illustration of a thoughtful street vendor (the 'thele wala') standing by his simple wooden stall, looking at a basket of soft pav bread and a bowl of spiced potato mix, warm yellow light."
+        },
+        {
+            "voiceoverText": "उन्होंने आलू को बेसन में लपेटा, तेल में तला, और हरी चटनी के साथ पाव में दबा दिया।",
+            "imagePrompt": "Cinematic illustration of hands dipping a potato ball into bright yellow besan batter, sizzling oil in a large black kadhai, steam rising dramatically, focus on the frying process."
+        },
+        {
+            "voiceoverText": "यह था वड़ा और यह था पाव। दोनों मिलकर बन गए 'वड़ा पाव'!",
+            "imagePrompt": "Nostalgic illustration of a happy, working-class customer taking the first bite of a freshly made Vada Pav, vibrant green chutney visible, simple wooden stall background, feeling of instant satisfaction."
+        },
+        {
+            "voiceoverText": "आज यह सिर्फ नाश्ता नहीं, यह मुंबई की धड़कन है, जो हर पेट को खुशी देती है।",
+            "imagePrompt": "Artistic, stylized illustration of a modern yet traditional Vada Pav stall, long queue of diverse people waiting patiently, iconic Mumbai landmarks faintly in the background, warm evening glow."
+        }
+    ]
+}

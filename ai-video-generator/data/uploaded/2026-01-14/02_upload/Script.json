@@ -1,0 +1,27 @@
+{
+    "foodItem": "Dosa",
+    "title": "डोसा: दक्षिण भारत का सबसे पुराना राज़ 🤫",
+    "description": "चावल और दाल का अद्भुत मेल। 🍚 यह है दक्षिण भारत की सबसे पुरानी desi kahani. Indian food story, food history. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "सदियों पहले, दक्षिण भारत के गाँवों में, एक साधारण विचार आया।",
+            "imagePrompt": "Traditional South Indian village kitchen, women soaking white rice and urad dal (black lentils) in large clay pots. Stone grinding tools (attukal) visible. Warm, earthy tones. Artistic, nostalgic illustration style."
+        },
+        {
+            "voiceoverText": "चावल और दाल को भिगोया गया, फिर पत्थर पर पीसकर एक गाढ़ा घोल बनाया गया।",
+            "imagePrompt": "Close-up of hands grinding the soaked rice and lentils using a traditional stone grinder (attukal/sil batta). The resulting batter is thick and creamy. Focus on the texture and effort. Traditional illustration style."
+        },
+        {
+            "voiceoverText": "रात भर यह घोल आराम करता रहा, और सुबह तक इसमें एक जादुई खट्टापन आ गया।",
+            "imagePrompt": "A large brass vessel containing the dosa batter, covered with a clean white cloth, resting in a dark corner of the kitchen. Subtle bubbles indicating fermentation. Soft, mysterious lighting. Nostalgic illustration."
+        },
+        {
+            "voiceoverText": "जब घोल हल्का और तैयार हो गया, उसे गरम लोहे के तवे पर पतले कपड़े से फैलाया गया।",
+            "imagePrompt": "A skilled hand quickly spreading the thin dosa batter in a circular motion on a hot, seasoned iron tawa (griddle). Steam rising gently. Focus on the quick, precise movement. Traditional Indian art style."
+        },
+        {
+            "voiceoverText": "बस फिर क्या था! कुरकुरा, सुनहरा डोसा तैयार था, जो आज भी हर घर का प्रिय नाश्ता है।",
+            "imagePrompt": "A perfectly golden, crisp dosa being lifted off the tawa with a wooden spatula. Served immediately with sambar and coconut chutney in traditional bronze bowls. Cinematic, warm lighting, focus on the crisp texture."
+        }
+    ]
+}

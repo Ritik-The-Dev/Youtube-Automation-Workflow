@@ -1,0 +1,23 @@
+{
+    "foodItem": "Poha (Flattened Rice)",
+    "title": "पोहा कैसे बना राजा का नाश्ता? 👑",
+    "description": "सबसे हल्का और स्वादिष्ट नाश्ता! 🍚 Poha की अनोखी Indian food story. Food history की ये desi kahani ज़रूर सुनो. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, जब यात्री दूर का सफर करते थे, उन्हें जल्दी बनने वाला खाना चाहिए था।",
+            "imagePrompt": "Traditional Indian village scene, dusty road, a weary traveler resting under a banyan tree. Warm sunset lighting. Artistic, nostalgic illustration style."
+        },
+        {
+            "voiceoverText": "तब किसी चतुर किसान ने सोचा: क्यों न चावल को दबाकर पतला कर दिया जाए?",
+            "imagePrompt": "A rustic village kitchen (chulha), a woman using a heavy wooden press to flatten boiled rice grains into thin flakes. Focus on the manual process. Warm, earthy tones, traditional Indian art."
+        },
+        {
+            "voiceoverText": "बस, फिर क्या था! थोड़ा तेल, राई, करी पत्ता और नींबू का रस मिलाया।",
+            "imagePrompt": "Close-up of a brass kadhai over a low fire, steam rising, mustard seeds popping and fresh curry leaves being added for tempering. Cinematic, traditional Indian illustration."
+        },
+        {
+            "voiceoverText": "यह हल्का, पेट भरने वाला नाश्ता 'पोहा' कहलाया। स्वाद ऐसा कि राजा भी मांगते थे!",
+            "imagePrompt": "A beautifully presented bowl of Kanda Poha garnished with sev, coriander, and lemon wedges, placed on a traditional wooden table in a simple, clean Indian home. Nostalgic, vibrant illustration style."
+        }
+    ]
+}

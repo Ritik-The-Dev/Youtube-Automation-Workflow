@@ -1,0 +1,23 @@
+{
+    "foodItem": "Chhole Bhature",
+    "title": "भटूरे का फूलना, क्या है ये राज़? 🤫",
+    "description": "Desi kahani of North India's favorite meal. 🍛\nIndian food story about the fluffiest bread ever made. 🍞\nFood history short story. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, जब छोले की सब्ज़ी बनती थी, तो लोग सोचते थे कि इसके तीखे स्वाद के साथ क्या खाएं?",
+            "imagePrompt": "A bustling, rustic North Indian dhaba kitchen scene. A large copper pot of steaming chhole is visible. Warm, earthy tones. Traditional Indian illustration style, focusing on the aroma and steam."
+        },
+        {
+            "voiceoverText": "एक चतुर हलवाई ने सोचा, क्यों न आटे में थोड़ी खटास मिलाई जाए, ताकि वह हल्का और नरम हो जाए?",
+            "imagePrompt": "Close-up of a halwai (cook) kneading white flour (maida) in a large brass parat. He is adding a spoonful of yogurt (dahi) or fermented starter to the dough. Focused lighting on the hands and the mixing process. Nostalgic illustration style."
+        },
+        {
+            "voiceoverText": "उसने आटे को रात भर ढक कर रखा, और सुबह जब इस ख़ास आटे को गरम तेल में डाला गया, तो एक जादू हुआ!",
+            "imagePrompt": "A dramatic shot of a large, deep kadhai filled with bubbling oil. The dough is just dropped in, starting to expand rapidly. The cook watches with surprise and delight. Traditional Indian art style, emphasizing the heat and transformation."
+        },
+        {
+            "voiceoverText": "आटा फूलकर गोल गुब्बारे जैसा बन गया! यह था गरमा गरम, फूला हुआ भटूरा, जो छोले का सबसे प्यारा साथी बना।",
+            "imagePrompt": "A perfectly puffed bhatura, golden brown, being lifted out of the oil with a slotted spoon. It is placed next to a bowl of spicy chhole on a traditional steel thali. Warm, inviting colors. Cinematic, traditional illustration."
+        }
+    ]
+}
