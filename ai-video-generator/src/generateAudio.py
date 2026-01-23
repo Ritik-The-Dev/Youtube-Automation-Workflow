@@ -6,9 +6,9 @@ import time
 # voice-426
 # voice-423
 
-def generate_voice(voiceOverText, sceneNumber, folderName, voice="voice-423", pitch=0, rate=0, max_retries=3):
+def generate_voice(voiceOverText, sceneNumber, folderName, voice="voice-423", pitch=12, rate=12, max_retries=3):
     url = "https://speechma.com/com.api/tts-api.php"
-    
+
     # Prepare the payload for the API request
     payload = {
         "text": voiceOverText,
@@ -46,6 +46,7 @@ def generate_voice(voiceOverText, sceneNumber, folderName, voice="voice-423", pi
                     print(f"Error: Audio file '{audio_path}' is invalid. Retrying...")
             
             else:
+                print(response)
                 print(f"Failed to generate audio. Status code: {response.status_code}. Retrying...")
         
         except Exception as e:

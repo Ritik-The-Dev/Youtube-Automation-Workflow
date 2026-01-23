@@ -27,7 +27,7 @@ def upload_to_youtube(video_path: str, script_path:str) -> str:
             },
             "status": {
                 "privacyStatus": "public",
-                "selfDeclaredMadeForKids": True,
+                "selfDeclaredMadeForKids": False,
             },
         },
         media_body=MediaFileUpload(
