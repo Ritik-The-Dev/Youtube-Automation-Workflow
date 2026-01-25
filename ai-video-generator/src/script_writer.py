@@ -192,11 +192,6 @@ told as a simple, interesting story.
         }
     )
     result = json.loads(response.text)
-    food_item = result.get("foodItem")
-
-    if food_item:
-        save_generated_topic(food_item)
-        
     return result
 
 # Example usage

@@ -1,0 +1,27 @@
+{
+    "foodItem": "Rajma Chawal (Kidney Beans and Rice)",
+    "title": "राजमा चावल: विदेशी दाने का देसी सफर! 🌍",
+    "description": "राजमा, जो आया था दूर देशों से. 🚢 कश्मीर और पंजाब का दिल कैसे जीता? ❤️ Indian food story, food history, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "बहुत साल पहले, यह लाल दाना हमारे खेतों में नहीं उगता था। यह आया था दूर, पहाड़ों के पार से।",
+            "imagePrompt": "Traditional Indian illustration style. An old, rustic mountain pass or trading route. Merchants are exchanging goods, and a sack is slightly open revealing red kidney beans (rajma). Warm, earthy tones, cinematic lighting."
+        },
+        {
+            "voiceoverText": "कश्मीर के किसानों ने इसे अपनाया, पर इसका स्वाद थोड़ा फीका था। इसे चाहिए था प्यार और देसी मसाले।",
+            "imagePrompt": "Traditional Kashmiri village kitchen (rasoi). A woman in traditional attire is examining the rajma beans, looking thoughtful. Copper pots and wooden spoons are visible. Soft, nostalgic lighting."
+        },
+        {
+            "voiceoverText": "फिर किसी दादी माँ ने इसे रात भर भिगोया, और धीमी आंच पर अदरक, लहसुन और मसालों के साथ पकाया।",
+            "imagePrompt": "Nostalgic illustration of an old, smoky chulha (clay stove) in a village home. A large, bubbling handi (pot) filled with rich, dark red rajma curry is cooking slowly. Steam rising dramatically, focus on the texture of the curry."
+        },
+        {
+            "voiceoverText": "जब यह गाढ़ी दाल, गरमा गरम चावल के साथ मिली, तो बन गया भारत का सबसे सुकून देने वाला भोजन।",
+            "imagePrompt": "Cinematic illustration. A simple, wooden dining table. A plate piled high with fluffy white rice (chawal) next to a bowl of rich, steaming Rajma. Focus on comfort, warmth, and the perfect pairing."
+        },
+        {
+            "voiceoverText": "राजमा चावल सिर्फ खाना नहीं, यह है हर घर की याद, हर ठंड की गर्माहट और माँ के हाथ का स्वाद।",
+            "imagePrompt": "Artistic rendering of a happy Indian family (multi-generational) sitting together, sharing a meal of Rajma Chawal. Focus on smiles, shared tradition, and the cozy atmosphere of a traditional Indian home."
+        }
+    ]
+}

@@ -53,6 +53,7 @@ from src.script_writer import generate_scenes
 from src.generateImage import generate_image
 from src.generateAudio import generate_voice
 from src.generateVideo import generate_video
+from src.script_writer import save_generated_topic
 
 def run():
     scene_data = generate_scenes()
@@ -78,6 +79,8 @@ def run():
     
     # Create the final video from the images and audio
     generate_video("File_To_Upload", scene_data, folder_path)
+    save_generated_topic(scene_data["foodItem"])
+
 
 if __name__ == "__main__":
     run()
