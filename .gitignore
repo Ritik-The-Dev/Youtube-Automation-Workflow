@@ -6,6 +6,10 @@ token.json
 venv/
 upload-env/
 
+ai-video-generator/data/uploaded 
+
+ai-video-generator/src/__pycache__
+
 # Python cache
 __pycache__/
 *.pyc
