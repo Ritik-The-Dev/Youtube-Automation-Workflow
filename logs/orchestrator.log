@@ -458,3 +458,33 @@
 2026-01-27 18:51:04,178 - INFO - Starting video generation
 2026-01-27 19:56:07,335 - INFO - Upload successful
 2026-01-27 19:56:07,336 - INFO - Sleeping for 3985 seconds
+2026-01-27 21:31:30,746 - INFO - Starting video generation
+2026-01-27 21:34:26,743 - INFO - Upload successful
+2026-01-27 21:34:26,743 - INFO - Sleeping for 4962 seconds
+2026-01-27 22:57:08,774 - INFO - Starting video generation
+2026-01-28 00:54:01,727 - INFO - Upload successful
+2026-01-28 00:54:01,730 - INFO - Sleeping for 3784 seconds
+2026-01-28 09:31:34,604 - INFO - Starting video generation
+2026-01-28 09:35:39,495 - INFO - Upload successful
+2026-01-28 09:35:39,495 - INFO - Sleeping for 2160 seconds
+2026-01-28 10:14:33,508 - INFO - Starting video generation
+2026-01-28 10:17:40,313 - INFO - Upload successful
+2026-01-28 10:17:40,314 - INFO - Sleeping for 4420 seconds
+2026-01-28 11:31:20,331 - INFO - Starting video generation
+2026-01-28 11:34:56,377 - INFO - Upload successful
+2026-01-28 11:34:56,378 - INFO - Sleeping for 2333 seconds
+2026-01-28 14:30:09,140 - INFO - Starting video generation
+2026-01-28 14:33:32,452 - INFO - Upload successful
+2026-01-28 14:33:32,452 - INFO - Sleeping for 4248 seconds
+2026-01-28 15:44:20,478 - INFO - Starting video generation
+2026-01-28 15:47:43,532 - INFO - Upload successful
+2026-01-28 15:47:43,533 - INFO - Sleeping for 4543 seconds
+2026-01-28 17:09:56,811 - INFO - Starting video generation
+2026-01-28 17:16:43,385 - INFO - Upload successful
+2026-01-28 17:16:43,387 - INFO - Sleeping for 3627 seconds
+2026-01-28 19:19:54,792 - INFO - Starting video generation
+2026-01-28 19:38:34,644 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-28 19:38:34,645 - INFO - Sleeping for 4254 seconds
+2026-01-28 22:15:56,489 - INFO - Starting video generation
+2026-01-28 22:20:52,005 - INFO - Upload successful
+2026-01-28 22:20:52,005 - INFO - Sleeping for 5237 seconds
