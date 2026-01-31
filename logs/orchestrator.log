@@ -488,3 +488,60 @@
 2026-01-28 22:15:56,489 - INFO - Starting video generation
 2026-01-28 22:20:52,005 - INFO - Upload successful
 2026-01-28 22:20:52,005 - INFO - Sleeping for 5237 seconds
+2026-01-28 23:48:09,037 - INFO - Starting video generation
+2026-01-28 23:53:53,004 - INFO - Upload successful
+2026-01-28 23:53:53,005 - INFO - Sleeping for 4606 seconds
+2026-01-29 01:10:39,032 - INFO - Starting video generation
+2026-01-29 01:14:25,371 - INFO - Upload successful
+2026-01-29 01:14:25,372 - INFO - Sleeping for 4616 seconds
+2026-01-29 07:25:27,593 - INFO - Starting video generation
+2026-01-29 07:30:07,803 - INFO - Upload successful
+2026-01-29 07:30:07,804 - INFO - Sleeping for 4061 seconds
+2026-01-29 09:11:02,182 - INFO - Starting video generation
+2026-01-29 14:11:18,764 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-29 14:11:18,766 - INFO - Sleeping for 1855 seconds
+2026-01-29 17:40:22,002 - INFO - Starting video generation
+2026-01-29 17:44:51,881 - INFO - Upload successful
+2026-01-29 17:44:51,881 - INFO - Sleeping for 2890 seconds
+2026-01-29 19:19:31,639 - INFO - Starting video generation
+2026-01-29 19:39:55,479 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-29 19:39:55,480 - INFO - Sleeping for 4020 seconds
+2026-01-29 20:50:22,738 - INFO - Starting video generation
+2026-01-29 20:54:08,424 - INFO - Upload successful
+2026-01-29 20:54:08,424 - INFO - Sleeping for 4392 seconds
+2026-01-29 22:07:20,450 - INFO - Starting video generation
+2026-01-29 22:41:14,547 - INFO - Upload successful
+2026-01-29 22:41:14,549 - INFO - Sleeping for 3807 seconds
+2026-01-30 08:47:38,198 - INFO - Starting video generation
+2026-01-30 08:53:35,430 - INFO - Upload successful
+2026-01-30 08:53:35,433 - INFO - Sleeping for 4052 seconds
+2026-01-30 14:55:47,361 - INFO - Starting video generation
+2026-01-30 15:00:19,022 - INFO - Upload successful
+2026-01-30 15:00:19,023 - INFO - Sleeping for 2466 seconds
+2026-01-30 15:41:25,049 - INFO - Starting video generation
+2026-01-30 15:45:19,294 - ERROR - FAILED: Command '['ai-video-uploader/upload-env/Scripts/python.exe', '-m', 'src.watch_and_upload']' returned non-zero exit status 1.
+2026-01-30 15:45:19,295 - INFO - Sleeping for 3135 seconds
+2026-01-30 17:33:01,493 - INFO - Starting video generation
+2026-01-30 17:33:27,963 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-30 17:33:27,965 - INFO - Sleeping for 3784 seconds
+2026-01-30 19:56:57,370 - INFO - Starting video generation
+2026-01-30 19:57:15,522 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-30 19:57:15,522 - INFO - Sleeping for 3162 seconds
+2026-01-30 20:49:57,548 - INFO - Starting video generation
+2026-01-30 20:50:16,522 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-30 20:50:16,523 - INFO - Sleeping for 4473 seconds
+2026-01-31 06:13:02,873 - INFO - Starting video generation
+2026-01-31 06:16:19,710 - INFO - Upload successful
+2026-01-31 06:16:19,710 - INFO - Sleeping for 4192 seconds
+2026-01-31 07:26:11,732 - INFO - Starting video generation
+2026-01-31 07:29:50,214 - INFO - Upload successful
+2026-01-31 07:29:50,215 - INFO - Sleeping for 3264 seconds
+2026-01-31 08:24:14,237 - INFO - Starting video generation
+2026-01-31 08:27:07,074 - INFO - Upload successful
+2026-01-31 08:27:07,075 - INFO - Sleeping for 4901 seconds
+2026-01-31 10:48:31,288 - INFO - Starting video generation
+2026-01-31 14:37:57,600 - ERROR - FAILED: Command '['ai-video-generator/venv/Scripts/python.exe', 'run.py']' returned non-zero exit status 1.
+2026-01-31 14:37:57,603 - INFO - Sleeping for 5196 seconds
+2026-01-31 16:12:29,854 - INFO - Starting video generation
+2026-01-31 17:15:11,717 - INFO - Upload successful
+2026-01-31 17:15:11,720 - INFO - Sleeping for 3282 seconds
