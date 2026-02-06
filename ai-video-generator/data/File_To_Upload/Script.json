@@ -1,0 +1,23 @@
+{
+    "foodItem": "Khaman",
+    "title": "खमन इतना स्पंजी क्यों होता है? 🤔",
+    "description": "गुजरात के इस हल्के नाश्ते की कहानी। 💛 Steaming से बना यह जालीदार जादू। Indian food story, desi kahani. पूरी कहानी देखो 👀",
+    "scenes": [
+        {
+            "voiceoverText": "पुराने ज़माने में, गुजरात के व्यापारी बहुत जल्दी में होते थे। उन्हें चाहिए था एक हल्का, पर पेट भरने वाला नाश्ता।",
+            "imagePrompt": "Traditional Indian illustration of a bustling port city (like Surat or Ahmedabad) centuries ago. Merchants in turbans rushing. Focus on a small, busy street food stall with warm, early morning light."
+        },
+        {
+            "voiceoverText": "रसोईये ने बेसन (चने का आटा) लिया, उसे दही और हल्दी के साथ मिलाया, और रात भर आराम करने दिया ताकि वह फूल जाए।",
+            "imagePrompt": "Artistic illustration of a rustic Indian kitchen. Close-up on a large earthen pot (matka) covered with a cloth, showing the besan batter bubbling slightly (fermenting). Warm, nostalgic lighting."
+        },
+        {
+            "voiceoverText": "फिर इस फूले हुए घोल को भाप में पकाया गया। ना तेल, ना ज़्यादा घी! बस भाप की गर्मी ने इसे रुई जैसा नरम बना दिया।",
+            "imagePrompt": "Nostalgic illustration of a traditional Indian steamer (a large brass vessel over a wood fire with a perforated plate). Steam is rising dramatically, showing the cook carefully placing the batter tray inside."
+        },
+        {
+            "voiceoverText": "ऊपर से राई, करी पत्ता और हरी मिर्च का चटपटा तड़का! यह था हमारा फूला हुआ, जालीदार 'खमन', जो आज भी सबका पसंदीदा है।",
+            "imagePrompt": "Cinematic shot of a cook pouring sizzling tempering (tadka) from a small ladle over bright yellow, spongy squares of Khaman, garnished with coriander and coconut shavings. Warm, inviting colors, traditional Indian art style."
+        }
+    ]
+}
