@@ -114,33 +114,3 @@ def generate_video(vid, scene_data, folder_path):
     )
 
     print(f"\n✅ Video saved successfully: {output_path}\n")
-
-
-generate_video("File_To_Upload", 
-               {"scenes": [
-        {
-            "voiceoverText": "क्या आप जानते हो… समोसा पहले मीठा था? 😳… सच में!",
-            "imagePrompt": "Cinematic old India street market, lantern lights, vintage shop signboards, a sweet filled pastry being sold, warm sepia tone, bustling crowd, shallow depth of field, 35mm film look"
-        },
-        {
-            "voiceoverText": "उस जमाने में… मीठे स्वाद का दौर था… मसाला बाद में आया…",
-            "imagePrompt": "Historical kitchen scene, Indian cooks preparing a sweet filling in brass bowls, wooden table, steam rising, traditional utensils, film grain, moody lighting, old city background"
-        },
-        {
-            "voiceoverText": "फिर किसी ने सोच लिया… ‘मीठा ठीक है’… ‘पर तड़का और लगे!’…",
-            "imagePrompt": "Cinematic close-up of hands sprinkling spices into a filling, spices spilling like sparks, clay stove glow, rustic textures, dramatic highlights, old India ambiance"
-        },
-        {
-            "voiceoverText": "नतीजा… कुरकुरा… गरम… और एकदम देसी धमाका! 😄🔥",
-            "imagePrompt": "Samosa frying in a deep iron kadhai, bubbling oil, golden crisp texture, crowd watching from behind, traditional garam light, slow motion feel, cinematic contrast"
-        },
-        {
-            "voiceoverText": "आज हम सोचते हैं… ये हमेशा से ऐसा ही था… लेकिन नहीं! 😲… असली twist यही है…",
-            "imagePrompt": "Street scene with vintage posters showing old recipes, samosas served with chutneys and kachori-style snacks, people smiling, night-time glow, old India aesthetic, cinematic wide shot"
-        },
-        {
-            "voiceoverText": "तो अगली बार काटते ही… याद रखना… मीठा शुरू… और मसाला जीत गया! 😋…",
-            "imagePrompt": "Hero shot: steaming samosa held close to camera, condensation on fingertips, chutney drizzle, warm bokeh lights of old bazaar, cinematic end frame, high detail"
-        }
-    ]},
-               f"./data/{"File_To_Upload"}")
