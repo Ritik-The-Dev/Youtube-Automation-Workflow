@@ -23,6 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install -r requirements.txt
           pip install -r ai-video-generator/requirements.txt
           pip install -r ai-video-uploader/requirements.txt
 
