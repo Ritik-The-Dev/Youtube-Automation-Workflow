@@ -3,8 +3,8 @@ import time
 import random
 import logging
 from sendTelegramNotification import send_telegram
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 logging.basicConfig(
     filename="logs/orchestrator.log",
