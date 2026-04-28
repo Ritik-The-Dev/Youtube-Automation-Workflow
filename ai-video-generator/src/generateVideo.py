@@ -1,6 +1,5 @@
 from PIL import Image
 
-# 🔧 Fix for MoviePy + Pillow >=10
 if not hasattr(Image, "ANTIALIAS"):
     Image.ANTIALIAS = Image.Resampling.LANCZOS
     
@@ -30,7 +29,6 @@ def animated_image_clip(image_path, duration):
 
     clip = ImageClip(image_path).set_duration(duration)
 
-    # Controlled randomness
     zoom_start = 1.00
     zoom_end = random.uniform(1.05, 1.08)
 
@@ -59,7 +57,6 @@ def animated_image_clip(image_path, duration):
 def generate_video(vid, scene_data, folder_path):
     clips = []
 
-    # ---------- Background Music ----------
     bg_music_path = os.path.join("data", "bg_music.mp3")
 
     if not os.path.exists(bg_music_path):
@@ -67,7 +64,6 @@ def generate_video(vid, scene_data, folder_path):
 
     bg_music = AudioFileClip(bg_music_path).volumex(BG_MUSIC_VOLUME)
 
-    # ---------- Scene Loop ----------
     for i, scene in enumerate(scene_data["scenes"]):
 
         image_path = os.path.join(folder_path, f"Image{i}.png")
@@ -77,11 +73,9 @@ def generate_video(vid, scene_data, folder_path):
             print(f"⚠️ Skipping scene {i} (missing files)")
             continue
 
-        # ---------- Load Audio ----------
         voice_clip = AudioFileClip(audio_path)
         voice_clip = voice_clip.fx(vfx.speedx, VIDEO_SPEED)
 
-        # ---------- Animated Image ----------
         image_clip = animated_image_clip(
             image_path=image_path,
             duration=voice_clip.duration
@@ -122,27 +116,31 @@ def generate_video(vid, scene_data, folder_path):
     print(f"\n✅ Video saved successfully: {output_path}\n")
 
 
-# generate_video("File_To_Upload", 
-#                {"scenes" : [
-#         {
-#             "voiceoverText": "Uttarakhand ke haseen pahadon mein ek aisi mithai milti hai, jise log 'Pahadi Chocolate' kehte hain.",
-#             "imagePrompt": "A panoramic view of the misty Almora hills in old India, with stone houses and pine trees, warm morning sunlight, traditional Indian illustration style, cinematic lighting."
-#         },
-#         {
-#             "voiceoverText": "Yeh hai Bal Mithai. Isse banane ke liye khoya ko lohe ki kadhai mein itni der bhuna jata hai ki uska rang gehra bhura ho jaye.",
-#             "imagePrompt": "An old halwai in a wooden shop stirring a large iron kadhai over a wood fire, the milk solids turning a rich dark chocolate brown, steam rising, warm glow from the hearth."
-#         },
-#         {
-#             "voiceoverText": "Is bhune hue khoye mein cheeni milakar ise jamaya jata hai, bilkul kisi naye zamane ki fudge ki tarah.",
-#             "imagePrompt": "Close-up of thick, dark brown fudge-like blocks being sliced on a rustic wooden board, brass utensils and copper pots in the background, nostalgic atmosphere."
-#         },
-#         {
-#             "voiceoverText": "Lekin iska asli jaadu hai iske upar lage safed moti, jo ise ek anokha roop aur crunch dete hain.",
-#             "imagePrompt": "Hands gently rolling the dark brown cubes in tiny white sugar-coated poppy seeds, the white balls sparkling against the dark sweet, artistic focus on texture."
-#         },
-#         {
-#             "voiceoverText": "Aaj bhi Almora ki galiyon mein iski mehek sabko apni taraf khinch leti hai. Kya aapne ise kabhi khaya hai?",
-#             "imagePrompt": "A happy family standing in front of an old traditional sweet shop in a bustling hill bazaar, holding a leaf-wrapped packet of Bal Mithai, warm and nostalgic colors."
-#         }
-#     ]},
-#                f"./data/{"File_To_Upload"}")
+generate_video("File_To_Upload", 
+               {"scenes": [
+        {
+            "voiceoverText": "क्या आप जानते हो… समोसा पहले मीठा था? 😳… सच में!",
+            "imagePrompt": "Cinematic old India street market, lantern lights, vintage shop signboards, a sweet filled pastry being sold, warm sepia tone, bustling crowd, shallow depth of field, 35mm film look"
+        },
+        {
+            "voiceoverText": "उस जमाने में… मीठे स्वाद का दौर था… मसाला बाद में आया…",
+            "imagePrompt": "Historical kitchen scene, Indian cooks preparing a sweet filling in brass bowls, wooden table, steam rising, traditional utensils, film grain, moody lighting, old city background"
+        },
+        {
+            "voiceoverText": "फिर किसी ने सोच लिया… ‘मीठा ठीक है’… ‘पर तड़का और लगे!’…",
+            "imagePrompt": "Cinematic close-up of hands sprinkling spices into a filling, spices spilling like sparks, clay stove glow, rustic textures, dramatic highlights, old India ambiance"
+        },
+        {
+            "voiceoverText": "नतीजा… कुरकुरा… गरम… और एकदम देसी धमाका! 😄🔥",
+            "imagePrompt": "Samosa frying in a deep iron kadhai, bubbling oil, golden crisp texture, crowd watching from behind, traditional garam light, slow motion feel, cinematic contrast"
+        },
+        {
+            "voiceoverText": "आज हम सोचते हैं… ये हमेशा से ऐसा ही था… लेकिन नहीं! 😲… असली twist यही है…",
+            "imagePrompt": "Street scene with vintage posters showing old recipes, samosas served with chutneys and kachori-style snacks, people smiling, night-time glow, old India aesthetic, cinematic wide shot"
+        },
+        {
+            "voiceoverText": "तो अगली बार काटते ही… याद रखना… मीठा शुरू… और मसाला जीत गया! 😋…",
+            "imagePrompt": "Hero shot: steaming samosa held close to camera, condensation on fingertips, chutney drizzle, warm bokeh lights of old bazaar, cinematic end frame, high detail"
+        }
+    ]},
+               f"./data/{"File_To_Upload"}")

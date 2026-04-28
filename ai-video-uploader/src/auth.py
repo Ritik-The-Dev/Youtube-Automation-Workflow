@@ -7,25 +7,19 @@ from googleapiclient.discovery import build
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CLIENT_SECRET = os.path.join(BASE_DIR, "client_secret.json")
 TOKEN_FILE = os.path.join(BASE_DIR, "token.json")
 
 
 def get_youtube_client():
-    creds = None
+    if not os.path.exists(TOKEN_FILE):
+        raise Exception("❌ token.json missing. Authenticate locally first.")
 
-    if os.path.exists(TOKEN_FILE):
-        creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+    creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
 
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                CLIENT_SECRET, SCOPES
-            )
-            creds = flow.run_local_server(port=0)
+    if creds.expired and creds.refresh_token:
+        creds.refresh(Request())
 
+        # Save updated token
         with open(TOKEN_FILE, "w") as token:
             token.write(creds.to_json())
 

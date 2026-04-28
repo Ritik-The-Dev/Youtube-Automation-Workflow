@@ -9,13 +9,11 @@ def upload_to_youtube(video_path: str, script_path:str) -> str:
         script = json.load(f)
     title = script.get(
     "title",
-    "एक छोटी कहानी, बड़ी सीख 🌟 | Kids Moral Story"
+    "Amazing Food Stories"
 )
     description = script.get(
     "description",
-    "एक प्यारी सी बच्चों की कहानी जो सिखाती है अच्छी आदत ✨\n"
-    "Kids Moral Story | Hindi Kahani | Short Story\n"
-    "पूरी कहानी देखो 👀"
+    "Amazing Food Stories || Story Behind Foods #shorts"
 )
     request = youtube.videos().insert(
         part="snippet,status",

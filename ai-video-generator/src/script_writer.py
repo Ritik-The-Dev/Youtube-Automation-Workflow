@@ -1,69 +1,12 @@
-# import json
-# import os
-# from google import genai
-
-# client = genai.Client(
-#     api_key=os.environ["GEMINI_API_KEY"]
-# )
-
-# def generate_scenes(transcript_text):
-#     if not transcript_text or not transcript_text.strip():
-#         return None
-
-#     # Ensure transcript is not too long for prediction limits
-#     # transcript_text = transcript_text[:2500]
-
-#     prompt = f"""
-# Transform the following real-life incident into an ultra-realistic, cinematic short film script. Condense the narrative into a dynamic, 30-60 second sequence with vivid, immersive details. For each scene:
-# - Keep only essential plot points.
-# - Create a photorealistic, cinematic image prompt for each scene.
-# - Write a powerful, engaging voiceover text (in Hindi), capturing the essence of the moment.
-# - The response must strictly follow the JSON format and must include a scene breakdown with:
-#     - `voiceoverText`: 1–2 sentences in Hindi.
-#     - `imagePrompt`: A photorealistic, detailed description in English.
-    
-# Please break the story into 4-6 cinematic scenes.
-
-# JSON FORMAT:
-# {{
-#   "scenes": [
-#     {{
-#       "voiceoverText": "...",
-#       "imagePrompt": "..."
-#     }},
-#     ...
-#   ]
-# }}
-
-# INCIDENT:
-# {transcript_text}
-# """
-
-#     # Call to the AI model
-#     response = client.models.generate_content(
-#         model="models/gemini-flash-latest",
-#         contents=prompt,
-#         config={
-#             "response_mime_type": "application/json",
-#             "temperature": 0.3
-#         }
-#     )
-
-#     return json.loads(response.text)
-
-
 import json
 import os
-from google import genai
-
-client = genai.Client(
-    api_key=os.environ["GEMINI_API_KEY"]
-)
+import requests
+import string
+import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "..", "data")
 TOPICS_FILE = os.path.join(DATA_DIR, "generatedTopics.json")
-
 
 def load_generated_topics(file_path=TOPICS_FILE):
     if not os.path.exists(file_path):
@@ -88,83 +31,101 @@ def save_generated_topic(topic, file_path=TOPICS_FILE):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump({"topics": topics}, f, indent=4, ensure_ascii=False)
 
-
-def generate_scenes():
-  
+def generate_scenes(max_retries=5):
     used_topics = load_generated_topics()
     used_topics_text = ", ".join(used_topics) if used_topics else "None"
-    
-    # New prompt for generating the thrilling Indian Jawan story
+
     prompt = f"""
-You are a storyteller and food historian creating SHORT, ENGAGING STORIES
-about how FAMOUS INDIAN FOOD ITEMS were invented or traditionally made
-(like Jalebi, Rabri, Samosa, Lassi, Kulfi, etc.).
+You are a HIGH-PERFORMING viral short video script writer.
 
-The content is for SHORT VIDEO PLATFORMS.
-
-The story must be:
-- Simple and engaging
-- Family-friendly (kids + adults)
-- Rooted in Indian culture
-- Nostalgic and curious
-- Easy to understand
-- No modern slang, no complex history jargon
+Your job is NOT storytelling.
+Your job is to MAXIMIZE RETENTION and STOP SCROLLING.
 
 ━━━━━━━━━━━━━━━━━━
-CONTENT REQUIREMENTS:
+STRICT RULES:
 
-- Duration: 30–60 seconds
-- Tone: warm, nostalgic, slightly magical, storytelling style
-- Setting: old India, villages, bazaars, royal kitchens, halwai shops
-- Focus: ONE food item per story
-
-━━━━━━━━━━━━━━━━━━
-TITLE & DESCRIPTION (VERY IMPORTANT FOR REACH):
-
-1. Generate a CURIOSITY-DRIVEN TITLE:
-   - Hindi or Hinglish
-   - 5–10 words
-   - Emotional + mysterious
-   - Examples:
-     “जलेबी पहली बार कैसे बनी? 😲”
-     “रबड़ी की मीठी कहानी 🍯”
-     “समोसे का राज़ 🥟”
-
-2. Generate a SHORT DESCRIPTION:
-   - 2–3 simple lines
-   - Use emojis
-   - Include keywords:
-     Indian food story, food history, desi kahani, short story
-   - End with: “पूरी कहानी देखो 👀”
+- ONLY voiceoverText must be in Hindi
+- EVERYTHING ELSE must be in English
+- Output STRICT JSON ONLY (no extra text)
+- DO NOT use formal or robotic narration
 
 ━━━━━━━━━━━━━━━━━━
-SCENE STRUCTURE:
+CORE VIRAL STRUCTURE (MANDATORY):
 
-Break the story into 4–6 short scenes.
+Scene 1 → HOOK (pattern interrupt)
+Scene 2 → CONFUSION / curiosity
+Scene 3 → BUILD-UP (story develops)
+Scene 4 → TWIST / change
+Scene 5 → REVEAL
+Scene 6 → PAYOFF (memorable ending)
 
-For EACH scene:
-- `voiceoverText`:
-  1–2 short Hindi / Hinglish sentences
-  Spoken, simple, story-style narration
+━━━━━━━━━━━━━━━━━━
+HOOK RULE (VERY IMPORTANT):
 
-- `imagePrompt`:
-  Traditional Indian illustration style
-  Old halwai shop / village kitchen / royal rasoi
-  Warm lighting, steam, sweets, utensils
-  NOT photorealistic, NOT modern
-  Artistic, cinematic, nostalgic
+First line MUST:
+- break expectation
+- feel surprising or weird
+- create instant curiosity
 
-IMPORTANT:
-❌ DO NOT generate a story about these food items:
+❌ Avoid:
+"क्या आप जानते हो"
+"एक समय की बात है"
+
+✅ Use patterns like:
+"समोसा पहले मीठा था… और लोग उसे पसंद भी करते थे 😳"
+"ये डिश गलती से बनी थी… और आज हर कोई खाता है 🤯"
+
+━━━━━━━━━━━━━━━━━━
+VOICE STYLE (MANDATORY):
+
+- Conversational Hindi (not textbook)
+- Include at least:
+  • 1 relatable line (e.g. "सोचो ज़रा", "अजीब लगता है ना?")
+  • 1 light humor moment (e.g. "किसी ने सोचा होगा… क्यों ना experiment करें 😅")
+- Use pauses (...) for pacing
+- Keep sentences SHORT
+
+━━━━━━━━━━━━━━━━━━
+EMOTIONAL FLOW:
+
+Make viewer feel:
+Surprise → Curiosity → Engagement → Satisfaction
+
+━━━━━━━━━━━━━━━━━━
+TITLE (HIGH CTR):
+
+- 5–8 words
+- English or Hinglish
+- Must create curiosity gap
+- Add 1 emoji
+
+━━━━━━━━━━━━━━━━━━
+DESCRIPTION:
+
+- 2 lines
+- Include: Indian food story, desi kahani
+- Add emojis
+- End with: Watch till end 👀
+
+━━━━━━━━━━━━━━━━━━
+SCENES:
+
+4–6 scenes
+
+Each scene:
+- voiceoverText → Hindi only (1–2 short lines)
+- imagePrompt → English only
+  (cinematic, old India, halwai shop, warm lighting, storytelling visuals)
+
+━━━━━━━━━━━━━━━━━━
+AVOID THESE TOPICS:
 {used_topics_text}
 
-Pick a COMPLETELY NEW Indian food item not listed above.
-
 ━━━━━━━━━━━━━━━━━━
-STRICT JSON FORMAT (NO EXTRA TEXT):
+OUTPUT FORMAT:
 
 {{
-  "foodItem": "NAME OF FOOD",
+  "foodItem": "...",
   "title": "...",
   "description": "...",
   "scenes": [
@@ -174,27 +135,52 @@ STRICT JSON FORMAT (NO EXTRA TEXT):
     }}
   ]
 }}
-
-━━━━━━━━━━━━━━━━━━
-STORY SEED (CHANGE THIS EACH TIME):
-
-The origin or making of ONE Indian food item,
-told as a simple, interesting story.
 """
 
-    # Call to the AI model
-    response = client.models.generate_content(
-        model="models/gemini-flash-latest",
-        contents=prompt,
-        config={
-            "response_mime_type": "application/json",
-            "temperature": 0.3
-        }
-    )
-    result = json.loads(response.text)
-    return result
+    url = "https://gen.pollinations.ai/v1/chat/completions"
 
-# Example usage
+    headers = {
+        "Authorization": "Bearer " + os.getenv("POLLINATIONS_API_KEY"),
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "model": "openai",
+        "messages": [
+            {"role": "system", "content": "You generate viral short video scripts."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.7,
+        "response_format": {"type": "json_object"}
+    }
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.post(url, headers=headers, json=payload)
+
+            if response.status_code != 200:
+                raise Exception(response.text)
+
+            raw_content = response.json()["choices"][0]["message"]["content"]
+
+            result = json.loads(raw_content)
+
+            # Validate Hindi (first char check)
+            if result["scenes"][0]["voiceoverText"][0].lower() in string.ascii_lowercase:
+                print(f"⚠️ Attempt {attempt}: English detected, retrying...")
+                time.sleep(1)
+                continue
+
+            print("✅ Script generated successfully")
+            return result
+
+        except Exception as e:
+            print(f"⚠️ Attempt {attempt} failed: {e}")
+            time.sleep(2)
+
+    raise Exception("❌ Failed to generate valid Hindi script after retries")
+
+
 if __name__ == "__main__":
-    scene_data = generate_scenes()
-    print(json.dumps(scene_data, indent=4))  # Pretty print the generated JSON
+    data = generate_scenes()
+    print(json.dumps(data, indent=4, ensure_ascii=False))

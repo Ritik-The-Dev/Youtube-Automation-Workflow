@@ -48,32 +48,18 @@ def run():
         print("⚠️ No .mp4 file found in OUTBOX")
         return
 
-    today = date.today().isoformat()
-    today_folder = os.path.join(UPLOADED, today)
-    ensure_dir(today_folder)
-
-    # determine serial number (01, 02, ...)
-    existing = [
-        d for d in os.listdir(today_folder)
-        if os.path.isdir(os.path.join(today_folder, d))
-    ]
-    serial = len(existing) + 1
-
-    job_folder_name = f"{serial:02d}_upload"
-    dest_folder = os.path.join(today_folder, job_folder_name)
-    ensure_dir(dest_folder)
-
     print(f"Uploading video: {os.path.basename(video_path)}")
     video_id = upload_to_youtube(video_path,script_path)
     print(f"Uploaded → video_id={video_id}")
 
-    # move ALL files from OUTBOX into the dated job folder
     for file in os.listdir(OUTBOX):
         src = os.path.join(OUTBOX, file)
-        dst = os.path.join(dest_folder, file)
-        shutil.move(src, dst)
+        if os.path.isdir(src):
+            shutil.rmtree(src)
+        else:
+            os.remove(src)
 
-    print(f"✅ Moved all files to: {dest_folder}")
+    print(f"✅ Deleted all files in: {OUTBOX}")
 
 
 if __name__ == "__main__":

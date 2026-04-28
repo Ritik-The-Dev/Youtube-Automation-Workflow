@@ -1,19 +1,11 @@
-# OAuth secrets (CRITICAL)
 client_secret.json
 token.json
-
-# Virtual environments
 venv/
 upload-env/
-
-ai-video-generator/data/uploaded 
-
+ai-video-generator/data
 ai-video-generator/src/__pycache__
-
-# Python cache
 __pycache__/
 *.pyc
-
-# OS files
+.env
 .DS_Store
 Thumbs.db
