@@ -16,7 +16,7 @@ def generate_voice(
     voiceOverText,
     sceneNumber,
     folderName,
-    voice_name="onyx",
+    voice_name="fable",
     max_retries=3
 ):
 

@@ -58,6 +58,7 @@ def run_once():
         logging.info("Upload successful")
 
     except Exception as e:
+        send_telegram(f"❌ PIPELINE FAILED\n\n{str(e)[:1000]}")
         logging.error(f"FAILED: {e}")
 
 if __name__ == "__main__":
