@@ -8,10 +8,9 @@ from src.generateVideo import generate_video
 def run():
     scene_data = generate_scenes()
     
-    folder_path = "./data/File_To_Upload"
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-    
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    folder_path = os.path.join(BASE_DIR, "data", "File_To_Upload")
+
     scriptPath = os.path.join(folder_path, "Script.json")
     with open(scriptPath, 'w', encoding="utf-8") as f:
             json.dump(scene_data, f, ensure_ascii=False, indent=4)

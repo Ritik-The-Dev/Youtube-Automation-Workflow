@@ -1,2 +1,5 @@
 2026-04-28 07:08:58,532 - INFO - Starting video generation
 2026-04-28 07:09:07,505 - INFO - Upload successful
+2026-04-28 15:58:37,783 - INFO - Starting video generation
+2026-04-28 15:58:38,935 - ERROR - FAILED: Command '['python', 'run.py']' returned non-zero exit status 1.
+2026-04-28 15:58:53,483 - INFO - Starting video generation
