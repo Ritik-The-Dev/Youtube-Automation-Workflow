@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -34,6 +35,9 @@ jobs:
       - name: Create YouTube client secret file
         run: |
           printf "%s" '${{ secrets.YOUTUBE_CLIENT_SECRET }}' > ai-video-uploader/src/client_secret.json
+      
+      - name: Debug files
+        run: ls -R
 
       - name: Run pipeline
         env:
