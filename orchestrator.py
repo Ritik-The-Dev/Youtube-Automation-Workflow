@@ -1,16 +1,16 @@
 import subprocess
 import time
 import random
-import logging
+# import logging
 from sendTelegramNotification import send_telegram
 # from dotenv import load_dotenv
 # load_dotenv()
 
-logging.basicConfig(
-    filename="logs/orchestrator.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# logging.basicConfig(
+#     filename="logs/orchestrator.log",
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
 
 print("🚀 STARTING PIPELINE")
 
@@ -21,7 +21,7 @@ def run_once():
 
         print("👉 Step 1: Generating video")
 
-        logging.info("Starting video generation")
+        # logging.info("Starting video generation")
 
         # GEN_PYTHON = "ai-video-generator/venv/Scripts/python.exe"
         # UPLOADER_PYTHON = "ai-video-uploader/upload-env/Scripts/python.exe" 
@@ -55,11 +55,11 @@ def run_once():
 
         print("Uploaded Properly")
         send_telegram("✅ Video uploaded successfully!")
-        logging.info("Upload successful")
+        # logging.info("Upload successful")
 
     except Exception as e:
         send_telegram(f"❌ PIPELINE FAILED\n\n{str(e)[:1000]}")
-        logging.error(f"FAILED: {e}")
+        # logging.error(f"FAILED: {e}")
 
 if __name__ == "__main__":
         run_once()
