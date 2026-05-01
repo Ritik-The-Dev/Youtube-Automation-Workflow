@@ -36,60 +36,55 @@ def generate_scenes(max_retries=5):
     used_topics_text = ", ".join(used_topics) if used_topics else "None"
 
     prompt = f"""
-You are a HIGH-PERFORMING viral short video script writer.
+You are a viral storyteller for short-form videos.
 
-Your job is NOT storytelling.
-Your job is to MAXIMIZE RETENTION and STOP SCROLLING.
+Your ONLY goal:
+Make the viewer NOT scroll for 30 seconds.
 
-━━━━━━━━━━━━━━━━━━
-STRICT RULES:
-
-- ONLY voiceoverText must be in Hindi
-- EVERYTHING ELSE must be in English
-- Output STRICT JSON ONLY (no extra text)
-- DO NOT use formal or robotic narration
+IMPORTANT:
+- First generate ONE continuous Hindi narration (like someone speaking naturally) make the narration under 1 min continuous.
+- Then split it into scenes WITHOUT breaking flow of around 5-10 secs
 
 ━━━━━━━━━━━━━━━━━━
-CORE VIRAL STRUCTURE (MANDATORY):
 
-Scene 1 → HOOK (pattern interrupt)
-Scene 2 → CONFUSION / curiosity
-Scene 3 → BUILD-UP (story develops)
-Scene 4 → TWIST / change
-Scene 5 → REVEAL
-Scene 6 → PAYOFF (memorable ending)
+VOICE RULES:
 
-━━━━━━━━━━━━━━━━━━
-HOOK RULE (VERY IMPORTANT):
-
-First line MUST:
-- break expectation
-- feel surprising or weird
-- create instant curiosity
-
-❌ Avoid:
-"क्या आप जानते हो"
-"एक समय की बात है"
-
-✅ Use patterns like:
-"समोसा पहले मीठा था… और लोग उसे पसंद भी करते थे 😳"
-"ये डिश गलती से बनी थी… और आज हर कोई खाता है 🤯"
+- Sounds like a human telling a story in one breath
+- Use natural pauses (...), not hard sentence breaks
+- No robotic or segmented lines
+- Avoid forcing structure
 
 ━━━━━━━━━━━━━━━━━━
-VOICE STYLE (MANDATORY):
 
-- Conversational Hindi (not textbook)
-- Include at least:
-  • 1 relatable line (e.g. "सोचो ज़रा", "अजीब लगता है ना?")
-  • 1 light humor moment (e.g. "किसी ने सोचा होगा… क्यों ना experiment करें 😅")
-- Use pauses (...) for pacing
-- Keep sentences SHORT
+HOOK:
+
+Start with something shocking, weird, or unexpected.
+Must feel like: “Wait… what??”
 
 ━━━━━━━━━━━━━━━━━━
-EMOTIONAL FLOW:
 
-Make viewer feel:
-Surprise → Curiosity → Engagement → Satisfaction
+FLOW:
+
+The narration must feel like:
+curiosity → intrigue → escalation → twist → satisfying reveal
+
+━━━━━━━━━━━━━━━━━━
+
+STYLE:
+
+- Conversational Hindi / Hinglish
+- Smooth transitions between lines
+- Avoid abrupt stops
+- No textbook tone
+
+━━━━━━━━━━━━━━━━━━
+
+OUTPUT PROCESS:
+
+Step 1: Write FULL narration (internally)
+Step 2: Split into 4–6 scenes WITHOUT breaking flow
+
+Each scene should feel like continuation, not restart.
 
 ━━━━━━━━━━━━━━━━━━
 TITLE (HIGH CTR):
@@ -97,29 +92,25 @@ TITLE (HIGH CTR):
 - 5–8 words
 - English or Hinglish
 - Must create curiosity gap
-- Add 1 emoji
 
 ━━━━━━━━━━━━━━━━━━
 DESCRIPTION:
 
 - 2 lines
 - Include: Indian food story, desi kahani
-- Add emojis
 - End with: Watch till end 👀
-
-━━━━━━━━━━━━━━━━━━
-SCENES:
-
-4–6 scenes
-
-Each scene:
-- voiceoverText → Hindi only (1–2 short lines)
-- imagePrompt → English only
-  (cinematic, old India, halwai shop, warm lighting, storytelling visuals)
 
 ━━━━━━━━━━━━━━━━━━
 AVOID THESE TOPICS:
 {used_topics_text}
+
+━━━━━━━━━━━━━━━━━━
+
+OUTPUT REQUIREMENT:
+
+- OUTPUT MUST BE VALID JSON ONLY
+- Do not include any extra text
+- No explanation, no markdown, no comments
 
 ━━━━━━━━━━━━━━━━━━
 OUTPUT FORMAT:
@@ -150,7 +141,8 @@ OUTPUT FORMAT:
             {"role": "system", "content": "You generate viral short video scripts."},
             {"role": "user", "content": prompt}
         ],
-        "temperature": 0.7,
+        "temperature": 0.95,
+        "top_p": 0.9,
         "response_format": {"type": "json_object"}
     }
 
@@ -166,10 +158,10 @@ OUTPUT FORMAT:
             result = json.loads(raw_content)
 
             # Validate Hindi (first char check)
-            if result["scenes"][0]["voiceoverText"][0].lower() in string.ascii_lowercase:
-                print(f"⚠️ Attempt {attempt}: English detected, retrying...")
-                time.sleep(1)
-                continue
+            # if result["scenes"][0]["voiceoverText"][0].lower() in string.ascii_lowercase:
+            #     print(f"⚠️ Attempt {attempt}: English detected, retrying...")
+            #     time.sleep(1)
+            #     continue
 
             print("✅ Script generated successfully")
             return result

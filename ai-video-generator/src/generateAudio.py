@@ -16,7 +16,7 @@ def generate_voice(
     voiceOverText,
     sceneNumber,
     folderName,
-    voice_name="fable",
+    voice_name="st8o4LADtfxckX2PH08x",
     max_retries=3
 ):
 
@@ -26,7 +26,7 @@ def generate_voice(
     final_audio_path = os.path.join(folder_path, f"Scene{sceneNumber}.mp3")
 
     payload = json.dumps({
-        "model": "openai-audio",
+        # "model": "elevenmusic",
         "input": voiceOverText,
         "voice": voice_name,
         "response_format": "mp3",
