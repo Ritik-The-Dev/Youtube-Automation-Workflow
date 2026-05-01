@@ -1,44 +1,52 @@
-name: Auto Video Pipeline
+name: Test Commit Pipeline
 
 on:
-  schedule:
-    - cron: "0 6,12,18 * * *"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "test mode: change / nochange"
+        required: true
+        default: "change"
 
 permissions:
   contents: write
 
 concurrency:
-  group: auto-video-pipeline
+  group: test-commit-pipeline
   cancel-in-progress: false
 
 jobs:
-  run-script:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
+      # 🔥 This is the key testing control
+      - name: Simulate file change (only if mode=change)
+        if: ${{ github.event.inputs.mode == 'change' }}
+        run: |
+          echo "test $(date)" >> ai-video-generator/data/generatedTopics.json
 
       - name: Commit updated topics
-        if: success()
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
           git add ai-video-generator/data/generatedTopics.json
 
-          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
 
-          git commit -m "auto: update generated topics"
+          git commit -m "test: update generated topics"
 
+          # safer rebase
           git pull --rebase origin main
+
           git push origin HEAD:main
