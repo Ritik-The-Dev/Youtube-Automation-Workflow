@@ -1,12 +1,12 @@
 import os
 import json
-from src.script_writer import generate_scenes , save_generated_topic
+from src.script_writer import generate_with_feedback , save_generated_topic
 from src.generateImage import generate_image
 from src.generateAudio import generate_voice
 from src.generateVideo import generate_video
 
 def run():
-    scene_data = generate_scenes()
+    scene_data = generate_with_feedback()
     
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     folder_path = os.path.join(BASE_DIR, "data", "File_To_Upload")

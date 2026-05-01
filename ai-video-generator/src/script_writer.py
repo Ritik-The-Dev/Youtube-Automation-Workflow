@@ -1,12 +1,17 @@
 import json
 import os
 import requests
-import string
 import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "..", "data")
 TOPICS_FILE = os.path.join(DATA_DIR, "generatedTopics.json")
+
+API_URL = "https://gen.pollinations.ai/v1/chat/completions"
+API_KEY =  os.getenv("POLLINATIONS_API_KEY")
+
+
+# ------------------ TOPIC STORAGE ------------------
 
 def load_generated_topics(file_path=TOPICS_FILE):
     if not os.path.exists(file_path):
@@ -16,6 +21,7 @@ def load_generated_topics(file_path=TOPICS_FILE):
         data = json.load(f)
 
     return set(data.get("topics", []))
+
 
 def save_generated_topic(topic, file_path=TOPICS_FILE):
     topics = []
@@ -31,88 +37,82 @@ def save_generated_topic(topic, file_path=TOPICS_FILE):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump({"topics": topics}, f, indent=4, ensure_ascii=False)
 
-def generate_scenes(max_retries=5):
+
+# ------------------ API CALL ------------------
+
+def call_ai(prompt, temperature=0.9):
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "model": "openai",
+        "messages": [
+            {"role": "system", "content": "You are a viral short-form content expert."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": temperature,
+        "top_p": 0.9,
+        "response_format": {"type": "json_object"}
+    }
+
+    response = requests.post(API_URL, headers=headers, json=payload)
+
+    if response.status_code != 200:
+        raise Exception(response.text)
+
+    return json.loads(response.json()["choices"][0]["message"]["content"])
+
+
+# ------------------ GENERATION ------------------
+
+def generate_script():
     used_topics = load_generated_topics()
     used_topics_text = ", ".join(used_topics) if used_topics else "None"
 
     prompt = f"""
-You are a viral storyteller for short-form videos.
+    Act like a world-class viral short-form storyteller, scriptwriter, and retention strategist specialized in Hindi/Hinglish content for reels and shorts.
 
-Your ONLY goal:
-Make the viewer NOT scroll for 30 seconds.
+Your goal is to create a highly engaging, scroll-stopping food story video script that maximizes viewer retention for at least 30 seconds and drives curiosity till the end.
 
-IMPORTANT:
-- First generate ONE continuous Hindi narration (like someone speaking naturally) make the narration under 1 min continuous.
-- Then split it into scenes WITHOUT breaking flow of around 5-10 secs
+Task: Generate a continuous, natural-sounding Hindi narration about a unique or surprising Indian food story, then seamlessly split it into visual scenes.
 
-━━━━━━━━━━━━━━━━━━
+Requirements:
+1) First, internally craft ONE uninterrupted narration (under 60 seconds) that sounds like a human speaking in one breath.
+2) The narration must follow this emotional arc: curiosity → intrigue → escalation → twist → satisfying reveal.
+3) Use conversational Hindi/Hinglish with natural pauses using “...” instead of rigid sentences.
+4) Avoid robotic tone, forced segmentation, or abrupt endings.
+5) Then split the SAME narration into 5–10 second scenes WITHOUT breaking flow or restarting tone.
+6) Each scene must feel like a continuation of the previous one.
 
-VOICE RULES:
+Hook:
+- Start with a shocking, weird, or unexpected line that triggers “Wait… what??”
 
-- Sounds like a human telling a story in one breath
-- Use natural pauses (...), not hard sentence breaks
-- No robotic or segmented lines
-- Avoid forcing structure
-
-━━━━━━━━━━━━━━━━━━
-
-HOOK:
-
-Start with something shocking, weird, or unexpected.
-Must feel like: “Wait… what??”
-
-━━━━━━━━━━━━━━━━━━
-
-FLOW:
-
-The narration must feel like:
-curiosity → intrigue → escalation → twist → satisfying reveal
-
-━━━━━━━━━━━━━━━━━━
-
-STYLE:
-
-- Conversational Hindi / Hinglish
-- Smooth transitions between lines
-- Avoid abrupt stops
-- No textbook tone
-
-━━━━━━━━━━━━━━━━━━
-
-OUTPUT PROCESS:
-
-Step 1: Write FULL narration (internally)
-Step 2: Split into 4–6 scenes WITHOUT breaking flow
-
-Each scene should feel like continuation, not restart.
-
-━━━━━━━━━━━━━━━━━━
-TITLE (HIGH CTR):
-
+Title:
 - 5–8 words
 - English or Hinglish
-- Must create curiosity gap
+- Must create a strong curiosity gap and Highest Clicking
 
-━━━━━━━━━━━━━━━━━━
-DESCRIPTION:
-
-- 2 lines
-- Include: Indian food story, desi kahani
+Description:
+- High Retention
+- Must include: “Indian food story” and “desi kahani”
 - End with: Watch till end 👀
 
-━━━━━━━━━━━━━━━━━━
-AVOID THESE TOPICS:
-{used_topics_text}
+Context:
+///
+Avoid these topics: {used_topics_text}
+Follow structured output discipline and strict formatting as recommended in OUTPUT FORMAT
+///
 
-━━━━━━━━━━━━━━━━━━
+Constraints:
+- Format: Strict JSON only
+- No markdown, no explanation, no extra text
+- Style: Conversational, smooth, immersive
+- Scope: Only food-based storytelling, no unrelated content
+- Reasoning: Build narrative step-by-step internally, but output only final JSON
+- Self-check: Ensure narration flow is continuous and scenes don’t feel disconnected
 
-OUTPUT REQUIREMENT:
-
-- OUTPUT MUST BE VALID JSON ONLY
-- Do not include any extra text
-- No explanation, no markdown, no comments
-
-━━━━━━━━━━━━━━━━━━
 OUTPUT FORMAT:
 
 {{
@@ -126,53 +126,107 @@ OUTPUT FORMAT:
     }}
   ]
 }}
+
+Take a deep breath and work on this problem step-by-step.
+
 """
 
-    url = "https://gen.pollinations.ai/v1/chat/completions"
+    return call_ai(prompt, temperature=0.95)
 
-    headers = {
-        "Authorization": "Bearer " + os.getenv("POLLINATIONS_API_KEY"),
-        "Content-Type": "application/json"
-    }
 
-    payload = {
-        "model": "openai",
-        "messages": [
-            {"role": "system", "content": "You generate viral short video scripts."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.95,
-        "top_p": 0.9,
-        "response_format": {"type": "json_object"}
-    }
+# ------------------ EVALUATION ------------------
 
-    for attempt in range(1, max_retries + 1):
-        try:
-            response = requests.post(url, headers=headers, json=payload)
+def evaluate_script(script):
+    prompt = f"""
+You are a ruthless viral content evaluator.
 
-            if response.status_code != 200:
-                raise Exception(response.text)
+Evaluate based on SHORT-FORM VIRALITY.
 
-            raw_content = response.json()["choices"][0]["message"]["content"]
+Return STRICT JSON:
 
-            result = json.loads(raw_content)
+{{
+  "scores": {{
+    "title": 1-5,
+    "hook": 1-5,
+    "curiosity": 1-5,
+    "craving": 1-5,
+    "payoff": 1-5,
+    "rewatchability": 1-5,
+    "overall": 1-5
+  }},
+  "verdict": "pass" or "fail",
+  "issues": ["..."],
+  "improvements": ["..."]
+}}
 
-            # Validate Hindi (first char check)
-            # if result["scenes"][0]["voiceoverText"][0].lower() in string.ascii_lowercase:
-            #     print(f"⚠️ Attempt {attempt}: English detected, retrying...")
-            #     time.sleep(1)
-            #     continue
+PASS RULE:
+- overall >= 4
+- hook >= 4
+- payoff >= 4
 
-            print("✅ Script generated successfully")
-            return result
+SCRIPT:
+{json.dumps(script, ensure_ascii=False)}
+"""
 
-        except Exception as e:
-            print(f"⚠️ Attempt {attempt} failed: {e}")
-            time.sleep(2)
+    return call_ai(prompt, temperature=0.3)
 
-    raise Exception("❌ Failed to generate valid Hindi script after retries")
 
+# ------------------ REFINEMENT ------------------
+
+def refine_script(script, evaluation):
+    prompt = f"""
+You are a viral script optimizer.
+
+Improve this script WITHOUT changing its core idea.
+
+Fix:
+ **Evaluation Criteria:**
+    *   **Hook:** Does it grab attention within the first 3 seconds? Is it intriguing and promise value?
+    *   **Craving:** Does it build anticipation and make the viewer want to see what happens next?
+    *   **Payoff:** Does it deliver on the promise of the hook? Is it satisfying and memorable?
+    *   **Relatability:** Will the target audience connect with the content and find it relevant to their lives?
+*   **Tone:** Maintain a professional and constructive tone.
+
+Return STRICT JSON (same format).
+
+ISSUES:
+{evaluation["issues"]}
+
+IMPROVEMENTS:
+{evaluation["improvements"]}
+
+SCRIPT:
+{json.dumps(script, ensure_ascii=False)}
+"""
+
+    return call_ai(prompt, temperature=0.8)
+
+
+# ------------------ MAIN PIPELINE ------------------
+
+def generate_with_feedback(max_attempts=3):
+    script = generate_script()
+
+    for i in range(max_attempts):
+        evaluation = evaluate_script(script)
+
+        print(f"\n🔍 Attempt {i+1} Score:", evaluation["scores"])
+
+        if evaluation["verdict"] == "pass":
+            print("✅ Passed viral criteria")
+            save_generated_topic(script["foodItem"])
+            return script
+
+        print("⚠️ सुधार किया जा रहा है...")
+        script = refine_script(script, evaluation)
+
+    print("⚠️ Max attempts reached, returning best version")
+    return script
+
+
+# ------------------ SAVE OUTPUT ------------------
 
 if __name__ == "__main__":
-    data = generate_scenes()
-    print(json.dumps(data, indent=4, ensure_ascii=False))
+    final_script = generate_with_feedback()
+
+    print(json.dumps(final_script, indent=4, ensure_ascii=False))
