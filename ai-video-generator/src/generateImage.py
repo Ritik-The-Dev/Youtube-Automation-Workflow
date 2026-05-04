@@ -10,7 +10,7 @@ headers = {
 
 def generate_image(prompt, sceneNumber, folderName, max_retries=3):
     encoded_request = urllib.parse.quote(prompt)
-    modelNames = ['grok-imagine' ,'zimage','flux','gptimage']
+    modelNames = ['klein','zimage','flux','gptimage']
     for attempt in range(max_retries):
         conn.request("GET", f"/image/{encoded_request}?model={modelNames[attempt]}&width=1080&height=1920", headers=headers)
         res = conn.getresponse()

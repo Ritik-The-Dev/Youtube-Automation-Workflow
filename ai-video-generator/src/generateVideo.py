@@ -67,7 +67,15 @@ def generate_video(vid, scene_data, folder_path):
     for i, scene in enumerate(scene_data["scenes"]):
 
         image_path = os.path.join(folder_path, f"Image{i}.png")
-        audio_path = os.path.join(folder_path, f"Scene{i}.mp3")
+        mp3_path = os.path.join(folder_path, f"Scene{i}.mp3")
+        wav_path = os.path.join(folder_path, f"Scene{i}.wav")
+
+        if os.path.exists(mp3_path):
+            audio_path = mp3_path
+        elif os.path.exists(wav_path):
+            audio_path = wav_path
+        else:
+            audio_path = None
 
         if not os.path.exists(image_path) or not os.path.exists(audio_path):
             print(f"⚠️ Skipping scene {i} (missing files)")

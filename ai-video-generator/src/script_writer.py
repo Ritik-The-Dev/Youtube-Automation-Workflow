@@ -72,48 +72,139 @@ def generate_script():
     used_topics_text = ", ".join(used_topics) if used_topics else "None"
 
     prompt = f"""
-    Act like a world-class viral short-form storyteller, scriptwriter, and retention strategist specialized in Hindi/Hinglish content for reels and shorts.
+# ROLE
+You are a high-performance short-form content generator specialized in Indian street food reels.
+You optimize for viewer retention, clarity, and rewatchability using psychological triggers.
 
-Your goal is to create a highly engaging, scroll-stopping food story video script that maximizes viewer retention for at least 30 seconds and drives curiosity till the end.
+---
 
-Task: Generate a continuous, natural-sounding Hindi narration about a unique or surprising Indian food story, then seamlessly split it into visual scenes.
+# OBJECTIVE
+Generate a short-form food video script that:
+- Stops scrolling within the first 1 second
+- Maintains retention by introducing a new curiosity gap every 2–3 seconds
+- Clearly shows what the viewer is seeing at all times
+- Delays the main payoff until the final 20% of the script
+- Encourages rewatch by including at least one “replay-worthy” visual moment
 
-Requirements:
-1) First, internally craft ONE uninterrupted narration (under 60 seconds) that sounds like a human speaking in one breath.
-2) The narration must follow this emotional arc: curiosity → intrigue → escalation → twist → satisfying reveal.
-3) Use conversational Hindi/Hinglish with natural pauses using “...” instead of rigid sentences.
-4) Avoid robotic tone, forced segmentation, or abrupt endings.
-5) Then split the SAME narration into 5–10 second scenes WITHOUT breaking flow or restarting tone.
-6) Each scene must feel like a continuation of the previous one.
+---
 
-Hook:
-- Start with a shocking, weird, or unexpected line that triggers “Wait… what??”
+# LANGUAGE CONSTRAINT (STRICT)
+- Voiceover MUST be in pure Devanagari Hindi only
+- No Hinglish, no English words, no Roman script
+- Use simple, spoken Hindi (grade 6–8 level)
+- Do NOT use complex metaphors or abstract phrases
 
-Title:
-- 5–8 words
-- English or Hinglish
-- Must create a strong curiosity gap and Highest Clicking
+---
 
-Description:
-- High Retention
-- Must include: “Indian food story” and “desi kahani”
-- End with: Watch till end 👀
+# STRUCTURE (MANDATORY FLOW)
 
-Context:
-///
-Avoid these topics: {used_topics_text}
-Follow structured output discipline and strict formatting as recommended in OUTPUT FORMAT
-///
+Scene 1 → Hook + clear visual anchor  
+Scene 2 → Build curiosity (what is unusual)  
+Scene 3 → Show preparation step  
+Scene 4 → Increase tension or confusion  
+Scene 5 → Twist or reveal setup  
+Scene 6 → Final payoff (visual + sensory satisfaction)
 
-Constraints:
-- Format: Strict JSON only
-- No markdown, no explanation, no extra text
-- Style: Conversational, smooth, immersive
-- Scope: Only food-based storytelling, no unrelated content
-- Reasoning: Build narrative step-by-step internally, but output only final JSON
-- Self-check: Ensure narration flow is continuous and scenes don’t feel disconnected
+---
 
-OUTPUT FORMAT:
+# SCENE DESIGN RULES (ENFORCED)
+
+For EACH scene:
+
+1. Must start with a micro-hook (pattern interrupt)
+2. Must clearly describe what is visible on screen
+3. Must introduce ONE new piece of information or curiosity
+4. Must NOT resolve the main curiosity until final scene
+5. Must be logically connected to previous scene
+
+---
+
+# CLARITY RULE (CRITICAL)
+
+At any point, the viewer must understand:
+- What food item is being made
+- What step is happening
+
+If a line causes confusion without adding curiosity → it is invalid
+
+---
+
+# PSYCHOLOGICAL TRIGGERS (USE SYSTEMATICALLY)
+
+Use at least 3 of the following across script:
+- Pattern interrupt: "रुको...", "ध्यान से देखो..."
+- Open loop: "लेकिन असली बात अभी बाकी है..."
+- Mistake framing: "यहाँ लोग गलती करते हैं..."
+- Delayed reveal: hide key ingredient until late
+- Sensory build-up: texture, sound, heat, flow
+
+---
+
+# SENSORY LANGUAGE RULE
+
+Each script must include at least:
+- 1 texture description (e.g., कुरकुरा, नरम)
+- 1 temperature cue (गरम, भाप)
+- 1 motion cue (बहता हुआ, टूटता हुआ)
+
+Do NOT use random sensory words without context
+
+---
+
+# FAILURE PREVENTION (STRICTLY FORBIDDEN)
+
+- ❌ Random or meaningless phrases
+- ❌ Abstract metaphors (e.g., "गरम जेब")
+- ❌ Repetition of same hook pattern
+- ❌ Early reveal of twist
+- ❌ Generic hooks like "आप यकीन नहीं करेंगे"
+- ❌ Disconnected scenes
+- ❌ Overloaded or chaotic wording
+
+---
+
+# TITLE RULES
+
+- 4–6 words only
+- Must create a curiosity gap
+- Must be understandable (not confusing)
+
+---
+
+# DESCRIPTION RULES
+
+- Must include: "Indian food story" and "desi kahani"
+- Must create curiosity, not summary
+- Must end with: Watch till end 👀
+
+---
+
+# TOPIC CONSTRAINT
+
+Avoid repeating topics from:
+{used_topics_text}
+
+Ensure the food concept is unique or has a unique twist
+
+---
+
+# JSON OUTPUT RULES (CRITICAL)
+
+- Output MUST be valid JSON (no markdown, no explanation)
+- Do NOT include double quotes inside text fields
+- Do NOT include line breaks inside strings
+- Escape all special characters properly
+- Ensure array and object closure is correct
+
+---
+
+OUTPUT STRICT JSON:
+
+STRICT JSON RULES:
+- Do NOT use quotes inside text
+- Avoid " symbols completely in voiceoverText
+- Use single quotes only if needed
+- Ensure valid JSON parsable output
 
 {{
   "foodItem": "...",
@@ -127,11 +218,31 @@ OUTPUT FORMAT:
   ]
 }}
 
-Take a deep breath and work on this problem step-by-step.
+---
 
+---
+
+# VALIDATION CHECK (MANDATORY BEFORE OUTPUT)
+
+Ensure ALL are true:
+
+1. First line creates immediate curiosity
+2. Each scene introduces new information
+3. Viewer always understands what is happening
+4. Payoff is delayed until final scene
+5. No vague or meaningless phrases exist
+6. JSON is syntactically valid and parsable
+
+If ANY condition fails → regenerate internally
 """
 
-    return call_ai(prompt, temperature=0.95)
+    for i in range(3):
+        try:
+            return call_ai(prompt)
+        except Exception as e:
+            print(f"Retry {i+1} بسبب JSON error...")
+            time.sleep(1)
+    raise Exception("Failed after retries")
 
 
 # ------------------ EVALUATION ------------------
@@ -214,7 +325,6 @@ def generate_with_feedback(max_attempts=3):
 
         if evaluation["verdict"] == "pass":
             print("✅ Passed viral criteria")
-            save_generated_topic(script["foodItem"])
             return script
 
         print("⚠️ सुधार किया जा रहा है...")
